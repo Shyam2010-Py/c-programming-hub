@@ -1,0 +1,1725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="C Programs Collection — practice C programming through beginner, intermediate, advanced and expert-level programs with code, output, algorithm and explanation.">
+    <meta name="author" content="Shyam">
+    <title>C Programs Collection | C Programming Hub</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/programs.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ============= NAVBAR ============= -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">&lt;/&gt;</span>
+                <span class="logo-text">C Programming<span class="logo-accent">Hub</span></span>
+            </a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="learn.html" class="nav-link">Learn</a></li>
+                <li><a href="syntax.html" class="nav-link">Syntax</a></li>
+                <li><a href="programs.html" class="nav-link active">Programs</a></li>
+                <li><a href="#" class="nav-link nav-disabled" data-soon="Lab Exams page coming soon">Lab Exams <span class="soon-pill">Soon</span></a></li>
+                <li><a href="#" class="nav-link nav-disabled" data-soon="Viva page coming soon">Viva <span class="soon-pill">Soon</span></a></li>
+                <li><a href="#" class="nav-link nav-disabled" data-soon="Projects page coming soon">Projects <span class="soon-pill">Soon</span></a></li>
+            </ul>
+
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ============= HERO ============= -->
+    <section class="page-hero">
+        <div class="page-hero-bg">
+            <div class="floating-icon fi-1">💻</div>
+            <div class="floating-icon fi-2">📚</div>
+            <div class="floating-icon fi-3">🚀</div>
+            <div class="floating-icon fi-4">⚙️</div>
+        </div>
+        <div class="container page-hero-content">
+            <div class="page-badge">
+                <span class="badge-dot"></span> Programs Library • Practice Hub
+            </div>
+            <h1 class="page-title">
+                💻 C Programs <span class="gradient-text">Collection</span>
+            </h1>
+            <p class="page-subtitle">
+                Practice C programming through beginner, intermediate, advanced, and expert-level programs.
+            </p>
+            <a href="#global-search" class="btn btn-primary">
+                Explore Programs
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+
+            <div class="quick-stats">
+                <div class="qs-item"><strong>10+</strong><span>Beginner Programs</span></div>
+                <div class="qs-item"><strong>5+</strong><span>Intermediate Programs</span></div>
+                <div class="qs-item"><strong>5+</strong><span>Advanced Programs</span></div>
+                <div class="qs-item"><strong>100+</strong><span>Planned Programs</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============= GLOBAL SEARCH ============= -->
+    <section class="search-section" id="global-search">
+        <div class="container">
+            <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input type="search" id="programSearch" placeholder="Search programs (try: factorial, array, pointer, file, swap...)" aria-label="Search programs">
+                <button class="search-clear" id="searchClear" aria-label="Clear search">×</button>
+                <span class="search-count" id="searchCount"></span>
+            </div>
+            <p class="search-hint">Search across program title, keywords, algorithm, concepts &amp; difficulty level.</p>
+
+            <!-- Difficulty filter chips -->
+            <div class="filter-chips" id="filterChips">
+                <button class="chip chip-all active" data-filter="all">All <span class="chip-count" id="chipAllCount">0</span></button>
+                <button class="chip chip-beginner" data-filter="beginner">🟢 Beginner <span class="chip-count" id="chipBeginnerCount">0</span></button>
+                <button class="chip chip-intermediate" data-filter="intermediate">🟡 Intermediate <span class="chip-count" id="chipIntermediateCount">0</span></button>
+                <button class="chip chip-advanced" data-filter="advanced">🟠 Advanced <span class="chip-count" id="chipAdvancedCount">0</span></button>
+                <button class="chip chip-expert" data-filter="expert">🔴 Expert <span class="chip-count" id="chipExpertCount">0</span></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============= MAIN CONTENT ============= -->
+    <main class="container programs-content" id="programsContent">
+
+        <!-- ============= SECTION 3 — CATEGORIES ============= -->
+        <section class="prog-section categories-section" id="categories">
+            <div class="section-header">
+                <span class="section-tag">Categories</span>
+                <h2 class="section-title">Program Categories</h2>
+                <p class="section-subtitle">Pick a difficulty and start practicing right away.</p>
+            </div>
+            <div class="categories-grid">
+                <a href="#beginner-programs" class="cat-card cat-beginner">
+                    <div class="cat-emoji">🟢</div>
+                    <h3>Beginner</h3>
+                    <p class="cat-count">10 Programs</p>
+                    <p class="cat-desc">Variables, I/O, simple math, conditions &amp; loops. Perfect starting point.</p>
+                </a>
+                <a href="#intermediate-programs" class="cat-card cat-intermediate">
+                    <div class="cat-emoji">🟡</div>
+                    <h3>Intermediate</h3>
+                    <p class="cat-count">5 Programs</p>
+                    <p class="cat-desc">Arrays, strings, functions &amp; palindromes. Build real logic.</p>
+                </a>
+                <a href="#advanced-programs" class="cat-card cat-advanced">
+                    <div class="cat-emoji">🟠</div>
+                    <h3>Advanced</h3>
+                    <p class="cat-count">5 Programs</p>
+                    <p class="cat-desc">Pointers, structures &amp; file handling — the C power tools.</p>
+                </a>
+                <a href="#coming-soon" class="cat-card cat-expert">
+                    <div class="cat-emoji">🔴</div>
+                    <h3>Expert</h3>
+                    <p class="cat-count">Coming Soon</p>
+                    <p class="cat-desc">Dynamic memory, linked lists, stacks &amp; queues.</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- ============= NO RESULTS ============= -->
+        <div class="no-results" id="noResults" hidden>
+            <div class="no-results-icon">🔎</div>
+            <h3>No programs found</h3>
+            <p>Try a different keyword, or clear the search to see all programs.</p>
+        </div>
+
+        <!-- ============= SECTION 4 — BEGINNER PROGRAMS ============= -->
+        <section class="prog-section" id="beginner-programs" data-level="beginner">
+            <div class="prog-section-header">
+                <span class="prog-num">01</span>
+                <h2>🟢 Beginner Programs</h2>
+                <span class="difficulty-tag difficulty-beginner">Beginner</span>
+            </div>
+            <p class="prog-intro">Start with the basics — I/O, arithmetic, conditions and simple loops. Every beginner program is fully working, explained and ready to run.</p>
+
+            <div class="programs-grid">
+
+                <!-- PROGRAM 1: HELLO WORLD -->
+                <article class="program-card" id="p-hello-world" data-level="beginner" data-keywords="hello world print printf basic introduction first program output">
+                    <header class="prog-card-header">
+                        <h3 class="prog-title">1. Hello World</h3>
+                        <span class="difficulty-tag difficulty-beginner">🟢 Beginner</span>
+                    </header>
+                    <p class="prog-problem"><strong>Problem:</strong> Write a C program to print <code>"Hello, World!"</code> on the screen.</p>
+
+                    <div class="prog-block">
+                        <h4>Algorithm</h4>
+                        <ol class="prog-algorithm">
+                            <li>Start the program inside <code>main()</code>.</li>
+                            <li>Use <code>printf()</code> to display the message.</li>
+                            <li>Return <code>0</code> to indicate successful execution.</li>
+                        </ol>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>C Program</h4>
+                        <div class="code-block-wrap">
+                            <button class="copy-btn" aria-label="Copy code">📋 Copy</button>
+                            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    printf("Hello, World!\n");
+    return 0;
+}</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>Sample Output</h4>
+                        <pre class="prog-output"><code>Hello, World!</code></pre>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>Explanation</h4>
+                        <p><code>#include &lt;stdio.h&gt;</code> imports the standard input/output library so we can use <code>printf()</code>. The <code>main()</code> function is the entry point of every C program. <code>\n</code> moves the cursor to a new line.</p>
+                    </div>
+
+                    <div class="prog-block prog-concepts">
+                        <h4>Concepts Used</h4>
+                        <div class="concept-tags">
+                            <span class="concept-tag">stdio.h</span>
+                            <span class="concept-tag">printf</span>
+                            <span class="concept-tag">main()</span>
+                        </div>
+                    </div>
+
+                    <div class="try-box">
+                        <span class="try-icon">🧠</span>
+                        <div>
+                            <strong>Try Yourself:</strong>
+                            Modify the program to print your name on the next line.
+                        </div>
+                    </div>
+                </article>
+
+                <!-- PROGRAM 2: PRINT NAME -->
+                <article class="program-card" id="p-print-name" data-level="beginner" data-keywords="print name string printf user input basics">
+                    <header class="prog-card-header">
+                        <h3 class="prog-title">2. Print Name</h3>
+                        <span class="difficulty-tag difficulty-beginner">🟢 Beginner</span>
+                    </header>
+                    <p class="prog-problem"><strong>Problem:</strong> Write a C program that takes the user's name as input and prints a greeting.</p>
+
+                    <div class="prog-block">
+                        <h4>Algorithm</h4>
+                        <ol class="prog-algorithm">
+                            <li>Declare a <code>char</code> array to hold the name.</li>
+                            <li>Use <code>scanf()</code> to read the name from the user.</li>
+                            <li>Print a greeting using <code>printf()</code>.</li>
+                        </ol>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>C Program</h4>
+                        <div class="code-block-wrap">
+                            <button class="copy-btn" aria-label="Copy code">📋 Copy</button>
+                            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    char name[50];
+    printf("Enter your name: ");
+    scanf("%s", name);
+    printf("Hello, %s! Welcome to C Programming.\n", name);
+    return 0;
+}</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>Sample Output</h4>
+                        <pre class="prog-output"><code>Enter your name: Shyam
+Hello, Shyam! Welcome to C Programming.</code></pre>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>Explanation</h4>
+                        <p><code>char name[50]</code> reserves space for 50 characters. <code>scanf("%s", name)</code> reads a word (no spaces). The <code>%s</code> format specifier inside <code>printf</code> is replaced with the entered name.</p>
+                    </div>
+
+                    <div class="prog-block prog-concepts">
+                        <h4>Concepts Used</h4>
+                        <div class="concept-tags">
+                            <span class="concept-tag">char array</span>
+                            <span class="concept-tag">scanf</span>
+                            <span class="concept-tag">%s</span>
+                        </div>
+                    </div>
+
+                    <div class="try-box">
+                        <span class="try-icon">🧠</span>
+                        <div>
+                            <strong>Try Yourself:</strong>
+                            Modify it to also ask for age and print <em>"Shyam is 20 years old"</em>.
+                        </div>
+                    </div>
+                </article>
+
+                <!-- PROGRAM 3: ADDITION OF TWO NUMBERS -->
+                <article class="program-card" id="p-addition" data-level="beginner" data-keywords="addition sum two numbers arithmetic scanf printf integer">
+                    <header class="prog-card-header">
+                        <h3 class="prog-title">3. Addition of Two Numbers</h3>
+                        <span class="difficulty-tag difficulty-beginner">🟢 Beginner</span>
+                    </header>
+                    <p class="prog-problem"><strong>Problem:</strong> Write a C program to add two integers entered by the user and display the sum.</p>
+
+                    <div class="prog-block">
+                        <h4>Algorithm</h4>
+                        <ol class="prog-algorithm">
+                            <li>Declare three integer variables: <code>a</code>, <code>b</code>, <code>sum</code>.</li>
+                            <li>Read <code>a</code> and <code>b</code> using <code>scanf()</code>.</li>
+                            <li>Compute <code>sum = a + b</code>.</li>
+                            <li>Print the result.</li>
+                        </ol>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>C Program</h4>
+                        <div class="code-block-wrap">
+                            <button class="copy-btn" aria-label="Copy code">📋 Copy</button>
+                            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int a, b, sum;
+    printf("Enter two numbers: ");
+    scanf("%d %d", &amp;a, &amp;b);
+    sum = a + b;
+    printf("Sum = %d\n", sum);
+    return 0;
+}</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>Sample Output</h4>
+                        <pre class="prog-output"><code>Enter two numbers: 12 18
+Sum = 30</code></pre>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>Explanation</h4>
+                        <p>The <code>&amp;</code> symbol gives the address of a variable so <code>scanf</code> can store the input there. <code>%d</code> is the format specifier for a signed decimal integer.</p>
+                    </div>
+
+                    <div class="prog-block prog-concepts">
+                        <h4>Concepts Used</h4>
+                        <div class="concept-tags">
+                            <span class="concept-tag">int</span>
+                            <span class="concept-tag">scanf</span>
+                            <span class="concept-tag">%d</span>
+                            <span class="concept-tag">arithmetic</span>
+                        </div>
+                    </div>
+
+                    <div class="try-box">
+                        <span class="try-icon">🧠</span>
+                        <div>
+                            <strong>Try Yourself:</strong>
+                            Extend the program to add <strong>three</strong> numbers instead of two.
+                        </div>
+                    </div>
+                </article>
+
+                <!-- PROGRAM 4: SWAP TWO NUMBERS -->
+                <article class="program-card" id="p-swap" data-level="beginner" data-keywords="swap two numbers exchange variable third variable temp">
+                    <header class="prog-card-header">
+                        <h3 class="prog-title">4. Swap Two Numbers</h3>
+                        <span class="difficulty-tag difficulty-beginner">🟢 Beginner</span>
+                    </header>
+                    <p class="prog-problem"><strong>Problem:</strong> Write a C program to swap two integers using a temporary variable.</p>
+
+                    <div class="prog-block">
+                        <h4>Algorithm</h4>
+                        <ol class="prog-algorithm">
+                            <li>Read two numbers into <code>a</code> and <code>b</code>.</li>
+                            <li>Copy the value of <code>a</code> into <code>temp</code>.</li>
+                            <li>Assign <code>b</code> to <code>a</code>.</li>
+                            <li>Assign <code>temp</code> to <code>b</code>.</li>
+                            <li>Print the swapped values.</li>
+                        </ol>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>C Program</h4>
+                        <div class="code-block-wrap">
+                            <button class="copy-btn" aria-label="Copy code">📋 Copy</button>
+                            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int a, b, temp;
+    printf("Enter a and b: ");
+    scanf("%d %d", &amp;a, &amp;b);
+
+    printf("Before swap: a = %d, b = %d\n", a, b);
+
+    temp = a;
+    a = b;
+    b = temp;
+
+    printf("After swap:  a = %d, b = %d\n", a, b);
+    return 0;
+}</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>Sample Output</h4>
+                        <pre class="prog-output"><code>Enter a and b: 5 9
+Before swap: a = 5, b = 9
+After swap:  a = 9, b = 5</code></pre>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>Explanation</h4>
+                        <p>Without <code>temp</code> we would lose one value. The temporary variable <em>holds</em> the original <code>a</code> while we overwrite it with <code>b</code>.</p>
+                    </div>
+
+                    <div class="prog-block prog-concepts">
+                        <h4>Concepts Used</h4>
+                        <div class="concept-tags">
+                            <span class="concept-tag">variables</span>
+                            <span class="concept-tag">assignment</span>
+                            <span class="concept-tag">temp variable</span>
+                        </div>
+                    </div>
+
+                    <div class="try-box">
+                        <span class="try-icon">🧠</span>
+                        <div>
+                            <strong>Try Yourself:</strong>
+                            Swap the same two numbers <strong>without</strong> using a third variable (use + and -).
+                        </div>
+                    </div>
+                </article>
+
+                <!-- PROGRAM 5: AREA OF CIRCLE -->
+                <article class="program-card" id="p-area-circle" data-level="beginner" data-keywords="area circle radius pi formula math float geometry">
+                    <header class="prog-card-header">
+                        <h3 class="prog-title">5. Area of Circle</h3>
+                        <span class="difficulty-tag difficulty-beginner">🟢 Beginner</span>
+                    </header>
+                    <p class="prog-problem"><strong>Problem:</strong> Write a C program to calculate the area of a circle given its radius. (Use <code>π = 3.14159</code>)</p>
+
+                    <div class="prog-block">
+                        <h4>Algorithm</h4>
+                        <ol class="prog-algorithm">
+                            <li>Read the radius into a <code>float</code>.</li>
+                            <li>Apply formula <code>area = π × r × r</code>.</li>
+                            <li>Display the area.</li>
+                        </ol>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>C Program</h4>
+                        <div class="code-block-wrap">
+                            <button class="copy-btn" aria-label="Copy code">📋 Copy</button>
+                            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    float radius, area;
+    const float PI = 3.14159;
+
+    printf("Enter radius: ");
+    scanf("%f", &amp;radius);
+
+    area = PI * radius * radius;
+
+    printf("Area of circle = %.2f\n", area);
+    return 0;
+}</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>Sample Output</h4>
+                        <pre class="prog-output"><code>Enter radius: 7
+Area of circle = 153.94</code></pre>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>Explanation</h4>
+                        <p><code>const</code> makes <code>PI</code> read-only. <code>%.2f</code> prints the float rounded to 2 decimal places. Use <code>float</code> (or <code>double</code>) for decimal numbers.</p>
+                    </div>
+
+                    <div class="prog-block prog-concepts">
+                        <h4>Concepts Used</h4>
+                        <div class="concept-tags">
+                            <span class="concept-tag">float</span>
+                            <span class="concept-tag">const</span>
+                            <span class="concept-tag">%f</span>
+                            <span class="concept-tag">geometry</span>
+                        </div>
+                    </div>
+
+                    <div class="try-box">
+                        <span class="try-icon">🧠</span>
+                        <div>
+                            <strong>Try Yourself:</strong>
+                            Also calculate the <strong>circumference</strong> of the circle in the same program.
+                        </div>
+                    </div>
+                </article>
+
+                <!-- PROGRAM 6: SIMPLE INTEREST -->
+                <article class="program-card" id="p-simple-interest" data-level="beginner" data-keywords="simple interest formula rate time principal math finance">
+                    <header class="prog-card-header">
+                        <h3 class="prog-title">6. Simple Interest</h3>
+                        <span class="difficulty-tag difficulty-beginner">🟢 Beginner</span>
+                    </header>
+                    <p class="prog-problem"><strong>Problem:</strong> Calculate Simple Interest given Principal (P), Rate (R) and Time (T) in years. <br>Formula: <code>SI = (P × R × T) / 100</code></p>
+
+                    <div class="prog-block">
+                        <h4>Algorithm</h4>
+                        <ol class="prog-algorithm">
+                            <li>Read P, R, T as <code>float</code>.</li>
+                            <li>Apply formula <code>SI = (P × R × T) / 100</code>.</li>
+                            <li>Display result.</li>
+                        </ol>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>C Program</h4>
+                        <div class="code-block-wrap">
+                            <button class="copy-btn" aria-label="Copy code">📋 Copy</button>
+                            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    float P, R, T, SI;
+    printf("Enter Principal, Rate, Time: ");
+    scanf("%f %f %f", &amp;P, &amp;R, &amp;T);
+
+    SI = (P * R * T) / 100;
+
+    printf("Simple Interest = %.2f\n", SI);
+    return 0;
+}</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>Sample Output</h4>
+                        <pre class="prog-output"><code>Enter Principal, Rate, Time: 1000 5 2
+Simple Interest = 100.00</code></pre>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>Explanation</h4>
+                        <p>The <code>*</code> and <code>/</code> are arithmetic operators. Operator precedence makes the parentheses crucial — without them, <code>P × R</code> would be divided by <code>100 × T</code> instead.</p>
+                    </div>
+
+                    <div class="prog-block prog-concepts">
+                        <h4>Concepts Used</h4>
+                        <div class="concept-tags">
+                            <span class="concept-tag">float</span>
+                            <span class="concept-tag">formula</span>
+                            <span class="concept-tag">arithmetic</span>
+                        </div>
+                    </div>
+
+                    <div class="try-box">
+                        <span class="try-icon">🧠</span>
+                        <div>
+                            <strong>Try Yourself:</strong>
+                            Also compute the <strong>total amount</strong> (Principal + Interest) and display it.
+                        </div>
+                    </div>
+                </article>
+
+                <!-- PROGRAM 7: EVEN OR ODD -->
+                <article class="program-card" id="p-even-odd" data-level="beginner" data-keywords="even odd number modulus if else condition conditional">
+                    <header class="prog-card-header">
+                        <h3 class="prog-title">7. Even or Odd</h3>
+                        <span class="difficulty-tag difficulty-beginner">🟢 Beginner</span>
+                    </header>
+                    <p class="prog-problem"><strong>Problem:</strong> Write a C program to check whether a given integer is even or odd.</p>
+
+                    <div class="prog-block">
+                        <h4>Algorithm</h4>
+                        <ol class="prog-algorithm">
+                            <li>Read an integer <code>n</code>.</li>
+                            <li>If <code>n % 2 == 0</code>, it's even; otherwise it's odd.</li>
+                            <li>Print the result.</li>
+                        </ol>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>C Program</h4>
+                        <div class="code-block-wrap">
+                            <button class="copy-btn" aria-label="Copy code">📋 Copy</button>
+                            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int n;
+    printf("Enter an integer: ");
+    scanf("%d", &amp;n);
+
+    if (n % 2 == 0)
+        printf("%d is Even\n", n);
+    else
+        printf("%d is Odd\n", n);
+
+    return 0;
+}</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>Sample Output</h4>
+                        <pre class="prog-output"><code>Enter an integer: 17
+17 is Odd</code></pre>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>Explanation</h4>
+                        <p>The modulo operator <code>%</code> returns the remainder. Any integer evenly divisible by 2 leaves remainder 0, so it's even.</p>
+                    </div>
+
+                    <div class="prog-block prog-concepts">
+                        <h4>Concepts Used</h4>
+                        <div class="concept-tags">
+                            <span class="concept-tag">if-else</span>
+                            <span class="concept-tag">modulus %</span>
+                            <span class="concept-tag">conditional</span>
+                        </div>
+                    </div>
+
+                    <div class="try-box">
+                        <span class="try-icon">🧠</span>
+                        <div>
+                            <strong>Try Yourself:</strong>
+                            Modify it to print whether the number is positive, negative, or zero as well.
+                        </div>
+                    </div>
+                </article>
+
+                <!-- PROGRAM 8: LARGEST OF TWO NUMBERS -->
+                <article class="program-card" id="p-largest-two" data-level="beginner" data-keywords="largest biggest two numbers comparison if else greater">
+                    <header class="prog-card-header">
+                        <h3 class="prog-title">8. Largest of Two Numbers</h3>
+                        <span class="difficulty-tag difficulty-beginner">🟢 Beginner</span>
+                    </header>
+                    <p class="prog-problem"><strong>Problem:</strong> Write a C program to find the largest of two numbers entered by the user.</p>
+
+                    <div class="prog-block">
+                        <h4>Algorithm</h4>
+                        <ol class="prog-algorithm">
+                            <li>Read two integers <code>a</code> and <code>b</code>.</li>
+                            <li>If <code>a &gt; b</code>, <code>a</code> is largest.</li>
+                            <li>Else, <code>b</code> is largest.</li>
+                        </ol>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>C Program</h4>
+                        <div class="code-block-wrap">
+                            <button class="copy-btn" aria-label="Copy code">📋 Copy</button>
+                            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int a, b;
+    printf("Enter two numbers: ");
+    scanf("%d %d", &amp;a, &amp;b);
+
+    if (a &gt; b)
+        printf("%d is the largest.\n", a);
+    else
+        printf("%d is the largest.\n", b);
+
+    return 0;
+}</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>Sample Output</h4>
+                        <pre class="prog-output"><code>Enter two numbers: 42 27
+42 is the largest.</code></pre>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>Explanation</h4>
+                        <p>The relational operator <code>&gt;</code> returns <code>1</code> (true) or <code>0</code> (false), which the <code>if</code> statement uses to choose the branch.</p>
+                    </div>
+
+                    <div class="prog-block prog-concepts">
+                        <h4>Concepts Used</h4>
+                        <div class="concept-tags">
+                            <span class="concept-tag">if-else</span>
+                            <span class="concept-tag">relational</span>
+                            <span class="concept-tag">comparison</span>
+                        </div>
+                    </div>
+
+                    <div class="try-box">
+                        <span class="try-icon">🧠</span>
+                        <div>
+                            <strong>Try Yourself:</strong>
+                            Modify it to also handle the case when both numbers are <strong>equal</strong>.
+                        </div>
+                    </div>
+                </article>
+
+                <!-- PROGRAM 9: FACTORIAL -->
+                <article class="program-card" id="p-factorial" data-level="beginner" data-keywords="factorial loop for while product multiplication iterative">
+                    <header class="prog-card-header">
+                        <h3 class="prog-title">9. Factorial</h3>
+                        <span class="difficulty-tag difficulty-beginner">🟢 Beginner</span>
+                    </header>
+                    <p class="prog-problem"><strong>Problem:</strong> Calculate the factorial of a number <code>n</code>. (n! = 1 × 2 × 3 × … × n)</p>
+
+                    <div class="prog-block">
+                        <h4>Algorithm</h4>
+                        <ol class="prog-algorithm">
+                            <li>Read <code>n</code>.</li>
+                            <li>Initialize <code>fact = 1</code>.</li>
+                            <li>Loop <code>i</code> from 1 to n, multiply <code>fact *= i</code>.</li>
+                            <li>Print <code>fact</code>.</li>
+                        </ol>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>C Program</h4>
+                        <div class="code-block-wrap">
+                            <button class="copy-btn" aria-label="Copy code">📋 Copy</button>
+                            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int n, i;
+    long long fact = 1;
+
+    printf("Enter a number: ");
+    scanf("%d", &amp;n);
+
+    for (i = 1; i &lt;= n; i++) {
+        fact = fact * i;
+    }
+
+    printf("Factorial of %d = %lld\n", n, fact);
+    return 0;
+}</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>Sample Output</h4>
+                        <pre class="prog-output"><code>Enter a number: 6
+Factorial of 6 = 720</code></pre>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>Explanation</h4>
+                        <p>Factorials grow fast, so we use <code>long long</code> to avoid overflow. The <code>for</code> loop runs exactly <code>n</code> times, multiplying each value into <code>fact</code>.</p>
+                    </div>
+
+                    <div class="prog-block prog-concepts">
+                        <h4>Concepts Used</h4>
+                        <div class="concept-tags">
+                            <span class="concept-tag">for loop</span>
+                            <span class="concept-tag">long long</span>
+                            <span class="concept-tag">accumulator</span>
+                        </div>
+                    </div>
+
+                    <div class="try-box">
+                        <span class="try-icon">🧠</span>
+                        <div>
+                            <strong>Try Yourself:</strong>
+                            Modify the program to calculate factorial using <strong>recursion</strong>.
+                        </div>
+                    </div>
+                </article>
+
+                <!-- PROGRAM 10: MULTIPLICATION TABLE -->
+                <article class="program-card" id="p-table" data-level="beginner" data-keywords="multiplication table for loop print pattern times">
+                    <header class="prog-card-header">
+                        <h3 class="prog-title">10. Multiplication Table</h3>
+                        <span class="difficulty-tag difficulty-beginner">🟢 Beginner</span>
+                    </header>
+                    <p class="prog-problem"><strong>Problem:</strong> Print the multiplication table of a number up to 10.</p>
+
+                    <div class="prog-block">
+                        <h4>Algorithm</h4>
+                        <ol class="prog-algorithm">
+                            <li>Read <code>n</code>.</li>
+                            <li>Loop <code>i</code> from 1 to 10.</li>
+                            <li>Print <code>n × i = n*i</code> in each iteration.</li>
+                        </ol>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>C Program</h4>
+                        <div class="code-block-wrap">
+                            <button class="copy-btn" aria-label="Copy code">📋 Copy</button>
+                            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int n, i;
+    printf("Enter number: ");
+    scanf("%d", &amp;n);
+
+    for (i = 1; i &lt;= 10; i++) {
+        printf("%d x %d = %d\n", n, i, n * i);
+    }
+    return 0;
+}</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>Sample Output</h4>
+                        <pre class="prog-output"><code>Enter number: 7
+7 x 1 = 7
+7 x 2 = 14
+7 x 3 = 21
+...
+7 x 10 = 70</code></pre>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>Explanation</h4>
+                        <p>The loop runs 10 times. Each iteration prints one row of the table using formatted output.</p>
+                    </div>
+
+                    <div class="prog-block prog-concepts">
+                        <h4>Concepts Used</h4>
+                        <div class="concept-tags">
+                            <span class="concept-tag">for loop</span>
+                            <span class="concept-tag">printf</span>
+                            <span class="concept-tag">pattern</span>
+                        </div>
+                    </div>
+
+                    <div class="try-box">
+                        <span class="try-icon">🧠</span>
+                        <div>
+                            <strong>Try Yourself:</strong>
+                            Let the user enter the <strong>range</strong> (e.g. up to 20) instead of always 10.
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ============= SECTION 5 — INTERMEDIATE PROGRAMS ============= -->
+        <section class="prog-section" id="intermediate-programs" data-level="intermediate">
+            <div class="prog-section-header">
+                <span class="prog-num">02</span>
+                <h2>🟡 Intermediate Programs</h2>
+                <span class="difficulty-tag difficulty-intermediate">Intermediate</span>
+            </div>
+            <p class="prog-intro">Move on to arrays, strings and functions — where real programs come alive.</p>
+
+            <div class="programs-grid">
+
+                <!-- PROGRAM 11: LARGEST ELEMENT IN ARRAY -->
+                <article class="program-card" id="p-largest-array" data-level="intermediate" data-keywords="array largest element max loop search">
+                    <header class="prog-card-header">
+                        <h3 class="prog-title">1. Largest Element in Array</h3>
+                        <span class="difficulty-tag difficulty-intermediate">🟡 Intermediate</span>
+                    </header>
+                    <p class="prog-problem"><strong>Problem:</strong> Find the largest element in an array of integers.</p>
+
+                    <div class="prog-block">
+                        <h4>Algorithm</h4>
+                        <ol class="prog-algorithm">
+                            <li>Declare array and read its size <code>n</code>.</li>
+                            <li>Read <code>n</code> elements.</li>
+                            <li>Assume <code>max = arr[0]</code>.</li>
+                            <li>Loop through array, update <code>max</code> whenever a bigger value is found.</li>
+                            <li>Print <code>max</code>.</li>
+                        </ol>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>C Program</h4>
+                        <div class="code-block-wrap">
+                            <button class="copy-btn" aria-label="Copy code">📋 Copy</button>
+                            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int arr[100], n, i, max;
+
+    printf("Enter number of elements: ");
+    scanf("%d", &amp;n);
+
+    printf("Enter %d elements:\n", n);
+    for (i = 0; i &lt; n; i++) {
+        scanf("%d", &amp;arr[i]);
+    }
+
+    max = arr[0];
+    for (i = 1; i &lt; n; i++) {
+        if (arr[i] &gt; max)
+            max = arr[i];
+    }
+
+    printf("Largest element = %d\n", max);
+    return 0;
+}</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>Sample Output</h4>
+                        <pre class="prog-output"><code>Enter number of elements: 5
+Enter 5 elements: 12 45 7 33 28
+Largest element = 45</code></pre>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>Explanation</h4>
+                        <p>Arrays are indexed from 0. We initialise <code>max</code> with the first element, then compare every remaining element. If any element is bigger, we replace <code>max</code>.</p>
+                    </div>
+
+                    <div class="prog-block prog-concepts">
+                        <h4>Concepts Used</h4>
+                        <div class="concept-tags">
+                            <span class="concept-tag">1D array</span>
+                            <span class="concept-tag">for loop</span>
+                            <span class="concept-tag">search</span>
+                        </div>
+                    </div>
+
+                    <div class="try-box">
+                        <span class="try-icon">🧠</span>
+                        <div>
+                            <strong>Try Yourself:</strong>
+                            Find the <strong>smallest</strong> element instead of the largest.
+                        </div>
+                    </div>
+                </article>
+
+                <!-- PROGRAM 12: SUM OF ARRAY ELEMENTS -->
+                <article class="program-card" id="p-sum-array" data-level="intermediate" data-keywords="array sum elements average loop addition">
+                    <header class="prog-card-header">
+                        <h3 class="prog-title">2. Sum of Array Elements</h3>
+                        <span class="difficulty-tag difficulty-intermediate">🟡 Intermediate</span>
+                    </header>
+                    <p class="prog-problem"><strong>Problem:</strong> Calculate the sum and average of all elements in an array.</p>
+
+                    <div class="prog-block">
+                        <h4>Algorithm</h4>
+                        <ol class="prog-algorithm">
+                            <li>Read array size <code>n</code> and elements.</li>
+                            <li>Loop and accumulate values in <code>sum</code>.</li>
+                            <li>Compute <code>avg = sum / n</code> (cast to float).</li>
+                            <li>Display both.</li>
+                        </ol>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>C Program</h4>
+                        <div class="code-block-wrap">
+                            <button class="copy-btn" aria-label="Copy code">📋 Copy</button>
+                            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int arr[100], n, i, sum = 0;
+    float avg;
+
+    printf("Enter number of elements: ");
+    scanf("%d", &amp;n);
+
+    printf("Enter %d elements:\n", n);
+    for (i = 0; i &lt; n; i++) {
+        scanf("%d", &amp;arr[i]);
+        sum += arr[i];
+    }
+
+    avg = (float)sum / n;
+
+    printf("Sum = %d\n", sum);
+    printf("Average = %.2f\n", avg);
+    return 0;
+}</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>Sample Output</h4>
+                        <pre class="prog-output"><code>Enter number of elements: 4
+Enter 4 elements: 10 20 30 40
+Sum = 100
+Average = 25.00</code></pre>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>Explanation</h4>
+                        <p><code>(float)sum</code> converts <code>sum</code> from <code>int</code> to <code>float</code> so the division produces a decimal result instead of integer truncation.</p>
+                    </div>
+
+                    <div class="prog-block prog-concepts">
+                        <h4>Concepts Used</h4>
+                        <div class="concept-tags">
+                            <span class="concept-tag">array</span>
+                            <span class="concept-tag">type casting</span>
+                            <span class="concept-tag">accumulator</span>
+                        </div>
+                    </div>
+
+                    <div class="try-box">
+                        <span class="try-icon">🧠</span>
+                        <div>
+                            <strong>Try Yourself:</strong>
+                            Also print the <strong>largest</strong> and <strong>smallest</strong> elements of the array.
+                        </div>
+                    </div>
+                </article>
+
+                <!-- PROGRAM 13: REVERSE A STRING -->
+                <article class="program-card" id="p-reverse-string" data-level="intermediate" data-keywords="string reverse characters array loop swap strlen">
+                    <header class="prog-card-header">
+                        <h3 class="prog-title">3. Reverse a String</h3>
+                        <span class="difficulty-tag difficulty-intermediate">🟡 Intermediate</span>
+                    </header>
+                    <p class="prog-problem"><strong>Problem:</strong> Reverse a string entered by the user without using the library function.</p>
+
+                    <div class="prog-block">
+                        <h4>Algorithm</h4>
+                        <ol class="prog-algorithm">
+                            <li>Read a string into <code>str</code>.</li>
+                            <li>Find its length manually.</li>
+                            <li>Swap characters <code>str[i]</code> and <code>str[len-1-i]</code>.</li>
+                            <li>Print the reversed string.</li>
+                        </ol>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>C Program</h4>
+                        <div class="code-block-wrap">
+                            <button class="copy-btn" aria-label="Copy code">📋 Copy</button>
+                            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    char str[100], temp;
+    int i, len = 0;
+
+    printf("Enter a string: ");
+    scanf("%s", str);
+
+    while (str[len] != '\0') len++;
+
+    for (i = 0; i &lt; len / 2; i++) {
+        temp = str[i];
+        str[i] = str[len - 1 - i];
+        str[len - 1 - i] = temp;
+    }
+
+    printf("Reversed: %s\n", str);
+    return 0;
+}</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>Sample Output</h4>
+                        <pre class="prog-output"><code>Enter a string: hello
+Reversed: olleh</code></pre>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>Explanation</h4>
+                        <p>Strings in C are stored as <code>char</code> arrays ending with the null character <code>'\0'</code>. We swap characters from both ends moving towards the centre.</p>
+                    </div>
+
+                    <div class="prog-block prog-concepts">
+                        <h4>Concepts Used</h4>
+                        <div class="concept-tags">
+                            <span class="concept-tag">string</span>
+                            <span class="concept-tag">null terminator</span>
+                            <span class="concept-tag">swap</span>
+                        </div>
+                    </div>
+
+                    <div class="try-box">
+                        <span class="try-icon">🧠</span>
+                        <div>
+                            <strong>Try Yourself:</strong>
+                            Reverse the string using a <strong>second</strong> array instead of swapping in place.
+                        </div>
+                    </div>
+                </article>
+
+                <!-- PROGRAM 14: PALINDROME STRING -->
+                <article class="program-card" id="p-palindrome" data-level="intermediate" data-keywords="palindrome string reverse same comparison check">
+                    <header class="prog-card-header">
+                        <h3 class="prog-title">4. Palindrome String</h3>
+                        <span class="difficulty-tag difficulty-intermediate">🟡 Intermediate</span>
+                    </header>
+                    <p class="prog-problem"><strong>Problem:</strong> Check whether a given string is a palindrome (reads the same forwards and backwards).</p>
+
+                    <div class="prog-block">
+                        <h4>Algorithm</h4>
+                        <ol class="prog-algorithm">
+                            <li>Read the string.</li>
+                            <li>Find its length.</li>
+                            <li>Compare <code>str[i]</code> with <code>str[len-1-i]</code> for all <code>i &lt; len/2</code>.</li>
+                            <li>If all match → palindrome; else → not palindrome.</li>
+                        </ol>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>C Program</h4>
+                        <div class="code-block-wrap">
+                            <button class="copy-btn" aria-label="Copy code">📋 Copy</button>
+                            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    char str[100];
+    int i, len = 0, flag = 1;
+
+    printf("Enter a string: ");
+    scanf("%s", str);
+
+    while (str[len] != '\0') len++;
+
+    for (i = 0; i &lt; len / 2; i++) {
+        if (str[i] != str[len - 1 - i]) {
+            flag = 0;
+            break;
+        }
+    }
+
+    if (flag)
+        printf("\"%s\" is a palindrome.\n", str);
+    else
+        printf("\"%s\" is NOT a palindrome.\n", str);
+
+    return 0;
+}</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>Sample Output</h4>
+                        <pre class="prog-output"><code>Enter a string: level
+"level" is a palindrome.</code></pre>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>Explanation</h4>
+                        <p>A <code>flag</code> variable tracks the result. The moment a mismatch is found, we break out of the loop early to save time.</p>
+                    </div>
+
+                    <div class="prog-block prog-concepts">
+                        <h4>Concepts Used</h4>
+                        <div class="concept-tags">
+                            <span class="concept-tag">string</span>
+                            <span class="concept-tag">palindrome</span>
+                            <span class="concept-tag">flag</span>
+                        </div>
+                    </div>
+
+                    <div class="try-box">
+                        <span class="try-icon">🧠</span>
+                        <div>
+                            <strong>Try Yourself:</strong>
+                            Make the check <strong>case-insensitive</strong> (e.g. "Level" should also be a palindrome).
+                        </div>
+                    </div>
+                </article>
+
+                <!-- PROGRAM 15: FUNCTION EXAMPLE -->
+                <article class="program-card" id="p-function-example" data-level="intermediate" data-keywords="function user-defined modular reusable parameters return value">
+                    <header class="prog-card-header">
+                        <h3 class="prog-title">5. Function Example</h3>
+                        <span class="difficulty-tag difficulty-intermediate">🟡 Intermediate</span>
+                    </header>
+                    <p class="prog-problem"><strong>Problem:</strong> Write a C program with a user-defined function <code>add()</code> that returns the sum of two numbers.</p>
+
+                    <div class="prog-block">
+                        <h4>Algorithm</h4>
+                        <ol class="prog-algorithm">
+                            <li>Define function <code>int add(int a, int b)</code> that returns <code>a + b</code>.</li>
+                            <li>In <code>main()</code>, read two numbers.</li>
+                            <li>Call <code>add()</code> and print the result.</li>
+                        </ol>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>C Program</h4>
+                        <div class="code-block-wrap">
+                            <button class="copy-btn" aria-label="Copy code">📋 Copy</button>
+                            <pre><code>#include &lt;stdio.h&gt;
+
+/* Function definition */
+int add(int a, int b) {
+    return a + b;
+}
+
+int main() {
+    int x, y;
+    printf("Enter two numbers: ");
+    scanf("%d %d", &amp;x, &amp;y);
+
+    int result = add(x, y);
+    printf("Sum = %d\n", result);
+
+    return 0;
+}</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>Sample Output</h4>
+                        <pre class="prog-output"><code>Enter two numbers: 15 25
+Sum = 40</code></pre>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>Explanation</h4>
+                        <p>Functions make code reusable and modular. <code>add</code> takes two <code>int</code> parameters and returns an <code>int</code>. The returned value is stored in <code>result</code>.</p>
+                    </div>
+
+                    <div class="prog-block prog-concepts">
+                        <h4>Concepts Used</h4>
+                        <div class="concept-tags">
+                            <span class="concept-tag">functions</span>
+                            <span class="concept-tag">parameters</span>
+                            <span class="concept-tag">return value</span>
+                        </div>
+                    </div>
+
+                    <div class="try-box">
+                        <span class="try-icon">🧠</span>
+                        <div>
+                            <strong>Try Yourself:</strong>
+                            Add a function <code>subtract()</code> as well and let the user choose the operation.
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ============= SECTION 6 — ADVANCED PROGRAMS ============= -->
+        <section class="prog-section" id="advanced-programs" data-level="advanced">
+            <div class="prog-section-header">
+                <span class="prog-num">03</span>
+                <h2>🟠 Advanced Programs</h2>
+                <span class="difficulty-tag difficulty-advanced">Advanced</span>
+            </div>
+            <p class="prog-intro">Master pointers, structures and file I/O — the real power features of C.</p>
+
+            <div class="programs-grid">
+
+                <!-- PROGRAM 16: POINTER EXAMPLE -->
+                <article class="program-card" id="p-pointer" data-level="advanced" data-keywords="pointer address dereference variable memory * &amp;">
+                    <header class="prog-card-header">
+                        <h3 class="prog-title">1. Pointer Example</h3>
+                        <span class="difficulty-tag difficulty-advanced">🟠 Advanced</span>
+                    </header>
+                    <p class="prog-problem"><strong>Problem:</strong> Demonstrate the use of pointers — store the address of an integer and print its value through the pointer.</p>
+
+                    <div class="prog-block">
+                        <h4>Algorithm</h4>
+                        <ol class="prog-algorithm">
+                            <li>Declare <code>int x = 10</code> and a pointer <code>int *p</code>.</li>
+                            <li>Assign <code>p = &amp;x</code> (store address of <code>x</code>).</li>
+                            <li>Print the address and the value via <code>*p</code>.</li>
+                        </ol>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>C Program</h4>
+                        <div class="code-block-wrap">
+                            <button class="copy-btn" aria-label="Copy code">📋 Copy</button>
+                            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int x = 10;
+    int *p = &amp;x;
+
+    printf("Value of x      = %d\n", x);
+    printf("Address of x    = %p\n", &amp;x);
+    printf("Value of p      = %p\n", p);
+    printf("Value at *p     = %d\n", *p);
+
+    return 0;
+}</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>Sample Output</h4>
+                        <pre class="prog-output"><code>Value of x      = 10
+Address of x    = 0x7ffd4c3a
+Value of p      = 0x7ffd4c3a
+Value at *p     = 10</code></pre>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>Explanation</h4>
+                        <p>A pointer stores a memory address. <code>&amp;x</code> gives the address of <code>x</code>. <code>*p</code> "dereferences" the pointer — it goes to that address and reads the value there.</p>
+                    </div>
+
+                    <div class="prog-block prog-concepts">
+                        <h4>Concepts Used</h4>
+                        <div class="concept-tags">
+                            <span class="concept-tag">pointer</span>
+                            <span class="concept-tag">address-of &amp;</span>
+                            <span class="concept-tag">dereference *</span>
+                        </div>
+                    </div>
+
+                    <div class="try-box">
+                        <span class="try-icon">🧠</span>
+                        <div>
+                            <strong>Try Yourself:</strong>
+                            Modify the value of <code>x</code> through the pointer using <code>*p = 20</code> and observe the change.
+                        </div>
+                    </div>
+                </article>
+
+                <!-- PROGRAM 17: SWAP USING POINTERS -->
+                <article class="program-card" id="p-swap-pointers" data-level="advanced" data-keywords="swap pointers call by reference function address">
+                    <header class="prog-card-header">
+                        <h3 class="prog-title">2. Swap Using Pointers</h3>
+                        <span class="difficulty-tag difficulty-advanced">🟠 Advanced</span>
+                    </header>
+                    <p class="prog-problem"><strong>Problem:</strong> Swap two numbers using a function and pointers (call by reference).</p>
+
+                    <div class="prog-block">
+                        <h4>Algorithm</h4>
+                        <ol class="prog-algorithm">
+                            <li>Define function <code>swap(int *a, int *b)</code>.</li>
+                            <li>Inside, swap values using a temp variable and dereferencing.</li>
+                            <li>In <code>main()</code>, pass addresses <code>&amp;x, &amp;y</code>.</li>
+                        </ol>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>C Program</h4>
+                        <div class="code-block-wrap">
+                            <button class="copy-btn" aria-label="Copy code">📋 Copy</button>
+                            <pre><code>#include &lt;stdio.h&gt;
+
+void swap(int *a, int *b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+int main() {
+    int x = 5, y = 9;
+    printf("Before swap: x = %d, y = %d\n", x, y);
+
+    swap(&amp;x, &amp;y);
+
+    printf("After swap:  x = %d, y = %d\n", x, y);
+    return 0;
+}</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>Sample Output</h4>
+                        <pre class="prog-output"><code>Before swap: x = 5, y = 9
+After swap:  x = 9, y = 5</code></pre>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>Explanation</h4>
+                        <p>This is called <strong>pass-by-reference</strong>. The function receives the addresses, so changes happen on the original variables — no copy is made.</p>
+                    </div>
+
+                    <div class="prog-block prog-concepts">
+                        <h4>Concepts Used</h4>
+                        <div class="concept-tags">
+                            <span class="concept-tag">pointer</span>
+                            <span class="concept-tag">pass by reference</span>
+                            <span class="concept-tag">void function</span>
+                        </div>
+                    </div>
+
+                    <div class="try-box">
+                        <span class="try-icon">🧠</span>
+                        <div>
+                            <strong>Try Yourself:</strong>
+                            Write a <code>swap()</code> that swaps <strong>without</strong> using a temp variable (using XOR).
+                        </div>
+                    </div>
+                </article>
+
+                <!-- PROGRAM 18: STUDENT RECORD USING STRUCTURE -->
+                <article class="program-card" id="p-struct-student" data-level="advanced" data-keywords="structure struct student record fields user-defined type">
+                    <header class="prog-card-header">
+                        <h3 class="prog-title">3. Student Record Using Structure</h3>
+                        <span class="difficulty-tag difficulty-advanced">🟠 Advanced</span>
+                    </header>
+                    <p class="prog-problem"><strong>Problem:</strong> Create a structure <code>Student</code> with roll, name and marks, then read and display one student's record.</p>
+
+                    <div class="prog-block">
+                        <h4>Algorithm</h4>
+                        <ol class="prog-algorithm">
+                            <li>Define <code>struct Student</code> with roll, name, marks.</li>
+                            <li>Declare a <code>struct Student s</code>.</li>
+                            <li>Read values into its fields.</li>
+                            <li>Display the record.</li>
+                        </ol>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>C Program</h4>
+                        <div class="code-block-wrap">
+                            <button class="copy-btn" aria-label="Copy code">📋 Copy</button>
+                            <pre><code>#include &lt;stdio.h&gt;
+
+struct Student {
+    int roll;
+    char name[50];
+    float marks;
+};
+
+int main() {
+    struct Student s;
+
+    printf("Enter roll: ");
+    scanf("%d", &amp;s.roll);
+
+    printf("Enter name: ");
+    scanf("%s", s.name);
+
+    printf("Enter marks: ");
+    scanf("%f", &amp;s.marks);
+
+    printf("\n--- Student Record ---\n");
+    printf("Roll : %d\n", s.roll);
+    printf("Name : %s\n", s.name);
+    printf("Marks: %.2f\n", s.marks);
+
+    return 0;
+}</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>Sample Output</h4>
+                        <pre class="prog-output"><code>Enter roll: 101
+Enter name: Shyam
+Enter marks: 88.5
+
+--- Student Record ---
+Roll : 101
+Name : Shyam
+Marks: 88.50</code></pre>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>Explanation</h4>
+                        <p>A <code>struct</code> groups related variables of different types. We access fields using the dot (<code>.</code>) operator.</p>
+                    </div>
+
+                    <div class="prog-block prog-concepts">
+                        <h4>Concepts Used</h4>
+                        <div class="concept-tags">
+                            <span class="concept-tag">struct</span>
+                            <span class="concept-tag">user-defined type</span>
+                            <span class="concept-tag">dot operator</span>
+                        </div>
+                    </div>
+
+                    <div class="try-box">
+                        <span class="try-icon">🧠</span>
+                        <div>
+                            <strong>Try Yourself:</strong>
+                            Add a field <code>grade</code> (char) and assign it based on marks (A/B/C).
+                        </div>
+                    </div>
+                </article>
+
+                <!-- PROGRAM 19: ARRAY OF STRUCTURES -->
+                <article class="program-card" id="p-array-struct" data-level="advanced" data-keywords="array structures students multiple records loop">
+                    <header class="prog-card-header">
+                        <h3 class="prog-title">4. Array of Structures</h3>
+                        <span class="difficulty-tag difficulty-advanced">🟠 Advanced</span>
+                    </header>
+                    <p class="prog-problem"><strong>Problem:</strong> Store and display records of multiple students using an array of structures.</p>
+
+                    <div class="prog-block">
+                        <h4>Algorithm</h4>
+                        <ol class="prog-algorithm">
+                            <li>Define <code>struct Student</code>.</li>
+                            <li>Declare an array <code>struct Student s[n]</code>.</li>
+                            <li>Loop to read each student's details.</li>
+                            <li>Loop again to display all records.</li>
+                        </ol>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>C Program</h4>
+                        <div class="code-block-wrap">
+                            <button class="copy-btn" aria-label="Copy code">📋 Copy</button>
+                            <pre><code>#include &lt;stdio.h&gt;
+
+struct Student {
+    int roll;
+    char name[50];
+    float marks;
+};
+
+int main() {
+    struct Student s[50];
+    int n, i;
+
+    printf("Enter number of students: ");
+    scanf("%d", &amp;n);
+
+    for (i = 0; i &lt; n; i++) {
+        printf("\nStudent %d\n", i + 1);
+        printf("  Roll : ");  scanf("%d", &amp;s[i].roll);
+        printf("  Name : ");  scanf("%s", s[i].name);
+        printf("  Marks: ");  scanf("%f", &amp;s[i].marks);
+    }
+
+    printf("\n--- All Records ---\n");
+    for (i = 0; i &lt; n; i++) {
+        printf("%d. %s (Roll %d) - %.2f\n",
+               s[i].roll, s[i].name, s[i].roll, s[i].marks);
+    }
+
+    return 0;
+}</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>Sample Output</h4>
+                        <pre class="prog-output"><code>Enter number of students: 2
+
+Student 1
+  Roll : 1
+  Name : Asha
+  Marks: 92
+Student 2
+  Roll : 2
+  Name : Ravi
+  Marks: 85
+
+--- All Records ---
+1. Asha (Roll 1) - 92.00
+2. Ravi (Roll 2) - 85.00</code></pre>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>Explanation</h4>
+                        <p>Combining arrays with structures lets us store many records of the same type. <code>s[i].name</code> accesses the i-th student's name field.</p>
+                    </div>
+
+                    <div class="prog-block prog-concepts">
+                        <h4>Concepts Used</h4>
+                        <div class="concept-tags">
+                            <span class="concept-tag">struct</span>
+                            <span class="concept-tag">array</span>
+                            <span class="concept-tag">loop</span>
+                        </div>
+                    </div>
+
+                    <div class="try-box">
+                        <span class="try-icon">🧠</span>
+                        <div>
+                            <strong>Try Yourself:</strong>
+                            Also print the student with the <strong>highest marks</strong> after the loop.
+                        </div>
+                    </div>
+                </article>
+
+                <!-- PROGRAM 20: FILE WRITE AND READ -->
+                <article class="program-card" id="p-file" data-level="advanced" data-keywords="file handling fopen fclose fprintf fscanf write read text">
+                    <header class="prog-card-header">
+                        <h3 class="prog-title">5. File Write and Read</h3>
+                        <span class="difficulty-tag difficulty-advanced">🟠 Advanced</span>
+                    </header>
+                    <p class="prog-problem"><strong>Problem:</strong> Write a string to a text file, then read it back and display it on screen.</p>
+
+                    <div class="prog-block">
+                        <h4>Algorithm</h4>
+                        <ol class="prog-algorithm">
+                            <li>Open <code>data.txt</code> in write mode with <code>fopen("data.txt", "w")</code>.</li>
+                            <li>Write a string using <code>fprintf</code>.</li>
+                            <li>Close the file with <code>fclose</code>.</li>
+                            <li>Reopen in read mode (<code>"r"</code>) and read with <code>fscanf</code>.</li>
+                            <li>Print the content and close again.</li>
+                        </ol>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>C Program</h4>
+                        <div class="code-block-wrap">
+                            <button class="copy-btn" aria-label="Copy code">📋 Copy</button>
+                            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    FILE *fp;
+    char text[100];
+
+    /* ---- WRITE ---- */
+    fp = fopen("data.txt", "w");
+    if (fp == NULL) {
+        printf("Error opening file!\n");
+        return 1;
+    }
+    fprintf(fp, "Hello from C Programming Hub!\n");
+    fclose(fp);
+    printf("Written to data.txt\n");
+
+    /* ---- READ ---- */
+    fp = fopen("data.txt", "r");
+    if (fp == NULL) {
+        printf("Error opening file!\n");
+        return 1;
+    }
+    printf("Reading from data.txt:\n");
+    while (fscanf(fp, "%[^\n]", text) != EOF) {
+        printf("%s\n", text);
+    }
+    fclose(fp);
+
+    return 0;
+}</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>Sample Output</h4>
+                        <pre class="prog-output"><code>Written to data.txt
+Reading from data.txt:
+Hello from C Programming Hub!</code></pre>
+                    </div>
+
+                    <div class="prog-block">
+                        <h4>Explanation</h4>
+                        <p><code>FILE</code> is a structure in <code>stdio.h</code>. <code>"w"</code> creates / overwrites the file, <code>"r"</code> reads. Always <code>fclose()</code> when done. The format specifier <code>%[^\n]</code> reads until a newline.</p>
+                    </div>
+
+                    <div class="prog-block prog-concepts">
+                        <h4>Concepts Used</h4>
+                        <div class="concept-tags">
+                            <span class="concept-tag">FILE *</span>
+                            <span class="concept-tag">fopen / fclose</span>
+                            <span class="concept-tag">fprintf / fscanf</span>
+                        </div>
+                    </div>
+
+                    <div class="try-box">
+                        <span class="try-icon">🧠</span>
+                        <div>
+                            <strong>Try Yourself:</strong>
+                            Append (<code>"a"</code> mode) the current <strong>date and time</strong> to the same file using <code>fprintf</code>.
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ============= SECTION 7 — PROGRAM ROADMAP ============= -->
+        <section class="prog-section roadmap-section" id="roadmap">
+            <div class="section-header">
+                <span class="section-tag">Roadmap</span>
+                <h2 class="section-title">Program Roadmap</h2>
+                <p class="section-subtitle">A visual progression of topics — start from the top and work your way down.</p>
+            </div>
+            <div class="prog-roadmap">
+                <div class="rm-step">Basics</div>
+                <div class="rm-arrow">↓</div>
+                <div class="rm-step">Conditions</div>
+                <div class="rm-arrow">↓</div>
+                <div class="rm-step">Loops</div>
+                <div class="rm-arrow">↓</div>
+                <div class="rm-step">Arrays</div>
+                <div class="rm-arrow">↓</div>
+                <div class="rm-step">Strings</div>
+                <div class="rm-arrow">↓</div>
+                <div class="rm-step">Functions</div>
+                <div class="rm-arrow">↓</div>
+                <div class="rm-step">Pointers</div>
+                <div class="rm-arrow">↓</div>
+                <div class="rm-step">Structures</div>
+                <div class="rm-arrow">↓</div>
+                <div class="rm-step">Files</div>
+                <div class="rm-arrow">↓</div>
+                <div class="rm-step rm-final">Projects 🚀</div>
+            </div>
+        </section>
+
+        <!-- ============= SECTION 8 — COMING SOON ============= -->
+        <section class="prog-section coming-soon-section" id="coming-soon">
+            <div class="section-header">
+                <span class="section-tag coming-soon-tag">Coming Soon</span>
+                <h2 class="section-title">Future Programs</h2>
+                <p class="section-subtitle">Expert-level topics and full projects, landing in upcoming versions.</p>
+            </div>
+
+            <div class="coming-soon-grid">
+                <div class="cs-card cs-expert">
+                    <div class="cs-emoji">🔴</div>
+                    <h3>Expert Programs</h3>
+                    <ul class="cs-list">
+                        <li>Dynamic Memory Allocation</li>
+                        <li>Linked Lists</li>
+                        <li>Stack</li>
+                        <li>Queue</li>
+                    </ul>
+                    <span class="cs-badge">Planned</span>
+                </div>
+
+                <div class="cs-card cs-projects">
+                    <div class="cs-emoji">🚀</div>
+                    <h3>Projects</h3>
+                    <ul class="cs-list">
+                        <li>Calculator</li>
+                        <li>Student Record System</li>
+                        <li>Library Management System</li>
+                        <li>Attendance Management System</li>
+                    </ul>
+                    <span class="cs-badge">Planned</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============= FOOTER ============= -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">&lt;/&gt;</span>
+                    <span class="logo-text">C Programming<span class="logo-accent">Hub</span></span>
+                </a>
+                <p class="footer-tagline">Learn C • Practice C • Master C</p>
+            </div>
+            <div class="footer-meta">
+                <p>Made with ❤️ by Shyam</p>
+                <p class="version">Version 0.4.0</p>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>© 2026 C Programming Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ============= TOAST ============= -->
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script src="js/main.js"></script>
+    <script src="js/programs.js"></script>
+</body>
+</html>

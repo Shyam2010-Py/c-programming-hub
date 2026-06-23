@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="C Programming Hub - Learn C Programming from Basics to Real Projects. Perfect for diploma and engineering students.">
+    <meta name="author" content="Shyam">
+    <title>C Programming Hub | Learn C from Basics to Real Projects</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ============= NAVBAR ============= -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">&lt;/&gt;</span>
+                <span class="logo-text">C Programming<span class="logo-accent">Hub</span></span>
+            </a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="learn.html" class="nav-link">Learn</a></li>
+                <li><a href="syntax.html" class="nav-link">Syntax</a></li>
+                <li><a href="programs.html" class="nav-link">Programs</a></li>
+                <li><a href="#" class="nav-link nav-disabled" data-soon="Lab Exams page coming soon">Lab Exams <span class="soon-pill">Soon</span></a></li>
+                <li><a href="#" class="nav-link nav-disabled" data-soon="Viva page coming soon">Viva <span class="soon-pill">Soon</span></a></li>
+                <li><a href="#" class="nav-link nav-disabled" data-soon="Projects page coming soon">Projects <span class="soon-pill">Soon</span></a></li>
+            </ul>
+
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ============= HERO SECTION ============= -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <div class="code-block code-block-1">
+                <span class="kw">#include</span> <span class="str">&lt;stdio.h&gt;</span><br>
+                <span class="kw">int</span> <span class="fn">main</span>() {<br>
+                &nbsp;&nbsp;<span class="fn">printf</span>(<span class="str">"Hello, World!\n"</span>);<br>
+                &nbsp;&nbsp;<span class="kw">return</span> <span class="num">0</span>;<br>
+                }
+            </div>
+            <div class="code-block code-block-2">
+                <span class="kw">int</span> x = <span class="num">10</span>;<br>
+                <span class="kw">for</span>(<span class="kw">int</span> i=<span class="num">0</span>; i&lt;x; i++) {<br>
+                &nbsp;&nbsp;<span class="fn">printf</span>(<span class="str">"%d "</span>, i);<br>
+                }
+            </div>
+        </div>
+
+        <div class="container hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span> v0.4.0 • Programs Collection Live
+            </div>
+            <h1 class="hero-title">
+                Master <span class="gradient-text">C Programming</span><br>
+                From Basics to Real Projects
+            </h1>
+            <p class="hero-subtitle">
+                Learn concepts, syntax, programs, lab exams, viva questions, and real-world projects — all in one place. Built for diploma &amp; engineering students.
+            </p>
+            <div class="hero-buttons">
+                <a href="learn.html" class="btn btn-primary">
+                    Start Learning
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+                <a href="programs.html" class="btn btn-secondary">
+                    Explore Programs
+                </a>
+            </div>
+
+            <div class="hero-meta">
+                <div class="meta-item"><span class="meta-icon">🎓</span> Diploma &amp; Engineering</div>
+                <div class="meta-item"><span class="meta-icon">🧪</span> Lab Exam Ready</div>
+                <div class="meta-item"><span class="meta-icon">🆓</span> 100% Free</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============= LEARNING ROADMAP ============= -->
+    <section class="section roadmap-section" id="roadmap">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Learning Path</span>
+                <h2 class="section-title">Your C Programming Roadmap</h2>
+                <p class="section-subtitle">A structured journey from beginner to advanced — follow step by step.</p>
+            </div>
+
+            <div class="roadmap">
+                <div class="roadmap-card" data-aos="fade-up">
+                    <div class="roadmap-icon">📘</div>
+                    <div class="roadmap-step">Step 01</div>
+                    <h3>Basics</h3>
+                    <p>Variables, data types, operators, and input/output.</p>
+                </div>
+                <div class="roadmap-arrow">↓</div>
+
+                <div class="roadmap-card" data-aos="fade-up">
+                    <div class="roadmap-icon">⚙️</div>
+                    <div class="roadmap-step">Step 02</div>
+                    <h3>Control Statements</h3>
+                    <p>if-else, switch case, and decision making.</p>
+                </div>
+                <div class="roadmap-arrow">↓</div>
+
+                <div class="roadmap-card" data-aos="fade-up">
+                    <div class="roadmap-icon">🔁</div>
+                    <div class="roadmap-step">Step 03</div>
+                    <h3>Loops</h3>
+                    <p>for, while, do-while, and nested loops.</p>
+                </div>
+                <div class="roadmap-arrow">↓</div>
+
+                <div class="roadmap-card" data-aos="fade-up">
+                    <div class="roadmap-icon">📂</div>
+                    <div class="roadmap-step">Step 04</div>
+                    <h3>Arrays &amp; Functions</h3>
+                    <p>1D/2D arrays, strings, recursion, and modular code.</p>
+                </div>
+                <div class="roadmap-arrow">↓</div>
+
+                <div class="roadmap-card" data-aos="fade-up">
+                    <div class="roadmap-icon">🧠</div>
+                    <div class="roadmap-step">Step 05</div>
+                    <h3>Pointers</h3>
+                    <p>Memory addresses, pointer arithmetic, and strings.</p>
+                </div>
+                <div class="roadmap-arrow">↓</div>
+
+                <div class="roadmap-card" data-aos="fade-up">
+                    <div class="roadmap-icon">🚀</div>
+                    <div class="roadmap-step">Step 06</div>
+                    <h3>Projects</h3>
+                    <p>Build real-world mini projects in C.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============= FEATURES ============= -->
+    <section class="section features-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">What You'll Get</span>
+                <h2 class="section-title">Everything You Need to Master C</h2>
+                <p class="section-subtitle">A complete learning package designed for students.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon icon-cyan">📚</div>
+                    <h3>Learn</h3>
+                    <p>Detailed explanations of every concept with examples and visual diagrams.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon icon-green">💻</div>
+                    <h3>Programs</h3>
+                    <p>Practice beginner to advanced C programs with output and explanations.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon icon-amber">🧪</div>
+                    <h3>Lab Exams</h3>
+                    <p>Prepare for practical examinations with common lab questions and solutions.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon icon-cyan">🎤</div>
+                    <h3>Viva Questions</h3>
+                    <p>Unit-wise and lab viva preparation with concise, exam-ready answers.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon icon-green">🎯</div>
+                    <h3>Challenges</h3>
+                    <p>Solve coding challenges sorted by difficulty to test and grow your skills.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon icon-amber">🚀</div>
+                    <h3>Projects</h3>
+                    <p>Build real-world C projects — from calculators to complete mini systems.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============= WHY CHOOSE ============= -->
+    <section class="section why-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Why Us</span>
+                <h2 class="section-title">Why Choose This Website?</h2>
+                <p class="section-subtitle">Built specifically with students in mind.</p>
+            </div>
+
+            <div class="why-grid">
+                <div class="why-box">
+                    <div class="why-check">✓</div>
+                    <h4>Student Friendly</h4>
+                    <p>Simple language, clear examples, perfect for beginners.</p>
+                </div>
+                <div class="why-box">
+                    <div class="why-check">✓</div>
+                    <h4>Mobile Friendly</h4>
+                    <p>Works smoothly on phones, tablets, and laptops.</p>
+                </div>
+                <div class="why-box">
+                    <div class="why-check">✓</div>
+                    <h4>Lab Exam Focused</h4>
+                    <p>Content tailored for diploma &amp; engineering lab exams.</p>
+                </div>
+                <div class="why-box">
+                    <div class="why-check">✓</div>
+                    <h4>Beginner to Advanced</h4>
+                    <p>Start from zero and grow to building real projects.</p>
+                </div>
+                <div class="why-box">
+                    <div class="why-check">✓</div>
+                    <h4>Real Projects</h4>
+                    <p>Apply your skills with hands-on practical projects.</p>
+                </div>
+                <div class="why-box">
+                    <div class="why-check">✓</div>
+                    <h4>Completely Free</h4>
+                    <p>No sign-up, no payment — just learn.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============= STATISTICS ============= -->
+    <section class="section stats-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">By The Numbers</span>
+                <h2 class="section-title">Growing Library of Content</h2>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">📘</div>
+                    <div class="stat-number" data-target="50">0</div>
+                    <div class="stat-label">Lessons</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">💻</div>
+                    <div class="stat-number" data-target="100">0</div>
+                    <div class="stat-label">Programs</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🎤</div>
+                    <div class="stat-number" data-target="500">0</div>
+                    <div class="stat-label">Viva Questions</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🚀</div>
+                    <div class="stat-number" data-target="20">0</div>
+                    <div class="stat-label">Projects</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============= CALL TO ACTION ============= -->
+    <section class="section cta-section" id="cta">
+        <div class="container">
+            <div class="cta-box">
+                <div class="cta-glow"></div>
+                <h2 class="cta-title">Ready to Start Learning?</h2>
+                <p class="cta-subtitle">Master C Programming step by step and become confident in coding.</p>
+                <a href="learn.html" class="btn btn-primary btn-lg">
+                    Start Learning
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============= FOOTER ============= -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-icon">&lt;/&gt;</span>
+                        <span class="logo-text">C Programming<span class="logo-accent">Hub</span></span>
+                    </div>
+                    <p class="footer-tagline">Learn • Practice • Build</p>
+                </div>
+                <div class="footer-meta">
+                    <p>Made with ❤️ by <strong>Shyam</strong></p>
+                    <p class="version">Version 0.4.0</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 C Programming Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+
+    <!-- Shared toast for "Coming Soon" notifications -->
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

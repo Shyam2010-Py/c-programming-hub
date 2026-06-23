@@ -1,0 +1,1565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn C Programming - Structured lessons from basics to advanced, with installation guides for mobile and PC.">
+    <meta name="author" content="Shyam">
+    <title>Learn C Programming | C Programming Hub</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/learn.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ============= NAVBAR ============= -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">&lt;/&gt;</span>
+                <span class="logo-text">C Programming<span class="logo-accent">Hub</span></span>
+            </a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="learn.html" class="nav-link active">Learn</a></li>
+                <li><a href="syntax.html" class="nav-link">Syntax</a></li>
+                <li><a href="programs.html" class="nav-link">Programs</a></li>
+                <li><a href="#" class="nav-link nav-disabled" data-soon="Lab Exams page coming soon">Lab Exams <span class="soon-pill">Soon</span></a></li>
+                <li><a href="#" class="nav-link nav-disabled" data-soon="Viva page coming soon">Viva <span class="soon-pill">Soon</span></a></li>
+                <li><a href="#" class="nav-link nav-disabled" data-soon="Projects page coming soon">Projects <span class="soon-pill">Soon</span></a></li>
+            </ul>
+
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ============= LEARN HERO ============= -->
+    <section class="page-hero">
+        <div class="page-hero-bg">
+            <div class="floating-icon fi-1">📘</div>
+            <div class="floating-icon fi-2">⚙️</div>
+            <div class="floating-icon fi-3">🔢</div>
+            <div class="floating-icon fi-4">🧠</div>
+        </div>
+        <div class="container page-hero-content">
+            <div class="page-badge">
+                <span class="badge-dot"></span> Section 01 • Learn
+            </div>
+            <h1 class="page-title">
+                📚 Learn <span class="gradient-text">C Programming</span>
+            </h1>
+            <p class="page-subtitle">
+                Master C Programming from basics to advanced through structured lessons, examples, practice questions, and real-world applications.
+            </p>
+            <div class="hero-buttons">
+                <a href="#lessons" class="btn btn-primary">
+                    Start Learning
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+                <a href="#setup" class="btn btn-secondary">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 3l8 4v6c0 4.5-3.4 8.4-8 9-4.6-.6-8-4.5-8-9V7l8-4z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    About Installation
+                </a>
+            </div>
+            <p class="hero-button-hint">
+                <span class="hint-icon">💡</span>
+                Already have a compiler? Click <strong>Start Learning</strong> to skip installation.
+            </p>
+        </div>
+    </section>
+
+    <!-- ============= LEARNING ROADMAP ============= -->
+    <section class="section" id="roadmap">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Learning Path</span>
+                <h2 class="section-title">Complete C Roadmap</h2>
+                <p class="section-subtitle">9 modules — follow them in order to master C from zero to advanced.</p>
+            </div>
+
+            <div class="learn-roadmap">
+                <div class="lr-card"><span class="lr-num">01</span><span class="lr-icon">📘</span><h4>Introduction to C</h4></div>
+                <div class="lr-card"><span class="lr-num">02</span><span class="lr-icon">💻</span><h4>Installation &amp; Setup</h4></div>
+                <div class="lr-card"><span class="lr-num">03</span><span class="lr-icon">🏗️</span><h4>Structure of C Program</h4></div>
+                <div class="lr-card"><span class="lr-num">04</span><span class="lr-icon">🔢</span><h4>Variables</h4></div>
+                <div class="lr-card"><span class="lr-num">05</span><span class="lr-icon">📦</span><h4>Data Types</h4></div>
+                <div class="lr-card"><span class="lr-num">06</span><span class="lr-icon">➕</span><h4>Operators</h4></div>
+                <div class="lr-card"><span class="lr-num">07</span><span class="lr-icon">⌨️</span><h4>Input &amp; Output</h4></div>
+                <div class="lr-card"><span class="lr-num">08</span><span class="lr-icon">🔀</span><h4>Decision Making</h4></div>
+                <div class="lr-card highlight"><span class="lr-num">09</span><span class="lr-icon">🔁</span><h4>Loops</h4></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============= INSTALLATION & SETUP ============= -->
+    <section class="section setup-section" id="setup">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Module 02</span>
+                <h2 class="section-title">Installation &amp; Setup</h2>
+                <p class="section-subtitle">Choose your platform and get your C compiler ready in minutes.</p>
+            </div>
+
+            <!-- MOBILE SETUP -->
+            <div class="setup-group">
+                <div class="setup-group-header">
+                    <span class="setup-group-icon">📱</span>
+                    <h3>Mobile Setup</h3>
+                </div>
+
+                <div class="setup-grid">
+                    <!-- Online Compilers -->
+                    <div class="setup-card">
+                        <div class="setup-card-head">
+                            <span class="setup-card-icon icon-cyan">🌐</span>
+                            <h4>Online Compilers</h4>
+                            <span class="setup-badge">Easiest</span>
+                        </div>
+                        <ul class="tool-list">
+                            <li>
+                                <strong>Programiz</strong>
+                                <span>programiz.com/c-programming/online-compiler</span>
+                            </li>
+                            <li>
+                                <strong>OnlineGDB</strong>
+                                <span>onlinegdb.com/online_c_compiler</span>
+                            </li>
+                            <li>
+                                <strong>Replit</strong>
+                                <span>replit.com/languages/c</span>
+                            </li>
+                        </ul>
+                        <ul class="benefit-list">
+                            <li>✓ No installation</li>
+                            <li>✓ Beginner friendly</li>
+                            <li>✓ Works on mobile</li>
+                        </ul>
+                    </div>
+
+                    <!-- Termux -->
+                    <div class="setup-card">
+                        <div class="setup-card-head">
+                            <span class="setup-card-icon icon-green">⚡</span>
+                            <h4>Termux Setup</h4>
+                            <span class="setup-badge">Power User</span>
+                        </div>
+                        <p class="setup-desc">Get a real Linux compiler on your Android device.</p>
+                        <div class="code-block-wrap">
+                            <div class="code-step">
+                                <span class="step-num">1</span>
+                                <span class="step-label">Install Clang</span>
+                            </div>
+                            <pre><code>pkg install clang</code></pre>
+
+                            <div class="code-step">
+                                <span class="step-num">2</span>
+                                <span class="step-label">Create <code>hello.c</code></span>
+                            </div>
+                            <pre><code>nano hello.c</code></pre>
+
+                            <div class="code-step">
+                                <span class="step-num">3</span>
+                                <span class="step-label">Compile</span>
+                            </div>
+                            <pre><code>clang hello.c -o hello</code></pre>
+
+                            <div class="code-step">
+                                <span class="step-num">4</span>
+                                <span class="step-label">Run</span>
+                            </div>
+                            <pre><code>./hello</code></pre>
+                        </div>
+                        <ul class="benefit-list">
+                            <li>✓ Real compiler</li>
+                            <li>✓ Offline support</li>
+                            <li>✓ Powerful</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PC SETUP -->
+            <div class="setup-group">
+                <div class="setup-group-header">
+                    <span class="setup-group-icon">💻</span>
+                    <h3>PC Setup</h3>
+                </div>
+
+                <div class="setup-grid">
+                    <!-- VS Code -->
+                    <div class="setup-card">
+                        <div class="setup-card-head">
+                            <span class="setup-card-icon icon-cyan">🧠</span>
+                            <h4>VS Code</h4>
+                            <span class="setup-badge">Recommended</span>
+                        </div>
+                        <ul class="tool-list">
+                            <li>
+                                <strong>VS Code</strong>
+                                <span>code.visualstudio.com</span>
+                            </li>
+                            <li>
+                                <strong>MinGW Compiler</strong>
+                                <span>Windows GCC compiler</span>
+                            </li>
+                            <li>
+                                <strong>C/C++ Extension</strong>
+                                <span>By Microsoft</span>
+                            </li>
+                        </ul>
+                        <ul class="benefit-list">
+                            <li>✓ Professional setup</li>
+                            <li>✓ Industry standard</li>
+                            <li>✓ Highly extensible</li>
+                        </ul>
+                    </div>
+
+                    <!-- Code::Blocks -->
+                    <div class="setup-card">
+                        <div class="setup-card-head">
+                            <span class="setup-card-icon icon-amber">🧱</span>
+                            <h4>Code::Blocks</h4>
+                            <span class="setup-badge">Beginner</span>
+                        </div>
+                        <p class="setup-desc">All-in-one IDE — install and start coding immediately.</p>
+                        <ul class="tool-list">
+                            <li>
+                                <strong>Code::Blocks</strong>
+                                <span>codeblocks.org</span>
+                            </li>
+                            <li>
+                                <strong>Includes GCC</strong>
+                                <span>No extra setup needed</span>
+                            </li>
+                        </ul>
+                        <ul class="benefit-list">
+                            <li>✓ Easy setup</li>
+                            <li>✓ Beginner friendly</li>
+                            <li>✓ Lightweight</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============= LESSON MODULES ============= -->
+    <section class="section lessons-section" id="lessons">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Lessons</span>
+                <h2 class="section-title">Start With The Basics</h2>
+                <p class="section-subtitle">Click any lesson to expand and read the full content.</p>
+            </div>
+
+            <!-- SEARCH -->
+            <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input type="search" id="lessonSearch" placeholder="Search lessons (e.g. variables, loops, pointers...)" aria-label="Search lessons">
+                <button class="search-clear" id="searchClear" aria-label="Clear search">×</button>
+                <span class="search-count" id="searchCount"></span>
+            </div>
+
+            <div class="lessons-list" id="lessonsList">
+
+                <!-- LESSON 1: INTRODUCTION TO C -->
+                <article class="lesson-card" data-lesson="introduction" data-keywords="intro introduction basics history features applications">
+                    <button class="lesson-header" aria-expanded="false">
+                        <div class="lesson-head-left">
+                            <span class="lesson-icon icon-cyan">📘</span>
+                            <div>
+                                <span class="lesson-number">Lesson 01</span>
+                                <h3>Introduction to C</h3>
+                            </div>
+                        </div>
+                        <span class="lesson-toggle" aria-hidden="true">+</span>
+                    </button>
+
+                    <div class="lesson-body">
+                        <!-- 1. Introduction -->
+                        <div class="lesson-section">
+                            <h4>1. Introduction</h4>
+                            <p>C is a powerful general-purpose <strong>procedural programming language</strong> developed in the early 1970s. It is the foundation for many modern languages like C++, Java, and Python. Learning C gives you a deep understanding of how software really works at the hardware level.</p>
+                        </div>
+
+                        <!-- 2. Theory -->
+                        <div class="lesson-section">
+                            <h4>2. Theory</h4>
+                            <div class="theory-grid">
+                                <div class="theory-item">
+                                    <h5>What is C?</h5>
+                                    <p>A structured, low-level programming language used to develop operating systems, embedded systems, compilers, and applications that require direct hardware manipulation.</p>
+                                </div>
+                                <div class="theory-item">
+                                    <h5>History of C</h5>
+                                    <p>Developed by <strong>Dennis Ritchie</strong> at Bell Labs in <strong>1972</strong>. It was built to rewrite the UNIX operating system. Later standardized by ANSI (C89) and ISO (C99, C11, C17).</p>
+                                </div>
+                                <div class="theory-item">
+                                    <h5>Features of C</h5>
+                                    <ul>
+                                        <li>Simple and efficient</li>
+                                        <li>Fast execution speed</li>
+                                        <li>Rich set of built-in operators</li>
+                                        <li>Modular — supports functions</li>
+                                        <li>Portable across platforms</li>
+                                    </ul>
+                                </div>
+                                <div class="theory-item">
+                                    <h5>Applications of C</h5>
+                                    <ul>
+                                        <li>Operating Systems (UNIX, Windows, Linux kernel)</li>
+                                        <li>Embedded systems &amp; IoT devices</li>
+                                        <li>Compilers and interpreters</li>
+                                        <li>Databases (MySQL, PostgreSQL)</li>
+                                        <li>Game engines and drivers</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3. Syntax -->
+                        <div class="lesson-section">
+                            <h4>3. Syntax</h4>
+                            <p>The simplest valid C program prints a message to the screen:</p>
+                            <pre class="code"><code>#include &lt;stdio.h&gt;
+
+int main() {
+    printf("Hello, World!");
+    return 0;
+}</code></pre>
+                        </div>
+
+                        <!-- 4. Example -->
+                        <div class="lesson-section">
+                            <h4>4. Example</h4>
+                            <pre class="code"><code>#include &lt;stdio.h&gt;
+
+int main() {
+    printf("Welcome to C Programming Hub!\n");
+    printf("C is the mother of all modern languages.\n");
+    return 0;
+}</code></pre>
+                        </div>
+
+                        <!-- 5. Output -->
+                        <div class="lesson-section">
+                            <h4>5. Output</h4>
+                            <pre class="output"><code>Welcome to C Programming Hub!
+C is the mother of all modern languages.</code></pre>
+                        </div>
+
+                        <!-- 6. Common Mistakes -->
+                        <div class="lesson-section">
+                            <h4>6. Common Mistakes</h4>
+                            <div class="mistake-box">
+                                <div class="mistake-item">❌ Forgetting <code>#include &lt;stdio.h&gt;</code> at the top of the file.</div>
+                                <div class="mistake-item">❌ Misspelling <code>main</code> as <code>mian</code> or <code>Main</code>.</div>
+                                <div class="mistake-item">❌ Missing curly braces <code>{ }</code> around the function body.</div>
+                                <div class="mistake-item">❌ Not adding a semicolon at the end of statements.</div>
+                            </div>
+                        </div>
+
+                        <!-- 7. Practice Questions -->
+                        <div class="lesson-section">
+                            <h4>7. Practice Questions</h4>
+                            <ol class="practice-list">
+                                <li>Print the message: <em>"I am learning C"</em>.</li>
+                                <li>Print your full name and college name on separate lines.</li>
+                                <li>Print three lines describing why you want to learn C.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- LESSON 2: STRUCTURE OF C PROGRAM -->
+                <article class="lesson-card" data-lesson="structure" data-keywords="structure program main header include return">
+                    <button class="lesson-header" aria-expanded="false">
+                        <div class="lesson-head-left">
+                            <span class="lesson-icon icon-amber">⚙️</span>
+                            <div>
+                                <span class="lesson-number">Lesson 02</span>
+                                <h3>Structure of a C Program</h3>
+                            </div>
+                        </div>
+                        <span class="lesson-toggle" aria-hidden="true">+</span>
+                    </button>
+
+                    <div class="lesson-body">
+                        <div class="lesson-section">
+                            <h4>1. Introduction</h4>
+                            <p>Every C program follows a specific structure. Understanding each part — header files, the <code>main()</code> function, statements, and the return value — is essential before writing your own programs.</p>
+                        </div>
+
+                        <div class="lesson-section">
+                            <h4>2. Theory</h4>
+                            <p>A C program is built from these building blocks:</p>
+                            <ul>
+                                <li><strong>Header Files</strong> — Bring in declarations for functions like <code>printf</code> and <code>scanf</code>.</li>
+                                <li><strong>main() function</strong> — The entry point where execution begins.</li>
+                                <li><strong>Statements</strong> — Instructions ending with a semicolon <code>;</code>.</li>
+                                <li><strong>return 0;</strong> — Signals that the program ended successfully.</li>
+                            </ul>
+                        </div>
+
+                        <div class="lesson-section">
+                            <h4>3. Syntax</h4>
+                            <pre class="code"><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    printf("Hello World");
+    return 0;
+}</code></pre>
+                        </div>
+
+                        <div class="lesson-section">
+                            <h4>4. Example (line-by-line explanation)</h4>
+                            <pre class="code"><code>#include &lt;stdio.h&gt;   // Header file for input/output functions
+
+int main()              // Entry point of every C program
+{                       // Start of main function
+    printf("Hello World");   // Prints Hello World on screen
+    return 0;           // Returns 0 to the OS (success)
+}                       // End of main function</code></pre>
+                            <div class="explain-grid">
+                                <div class="explain-item">
+                                    <span class="explain-line">#include &lt;stdio.h&gt;</span>
+                                    <p>Includes the <strong>Standard Input Output</strong> header so we can use <code>printf</code>.</p>
+                                </div>
+                                <div class="explain-item">
+                                    <span class="explain-line">int main()</span>
+                                    <p>Every C program must have <code>main()</code>. <code>int</code> means it returns an integer.</p>
+                                </div>
+                                <div class="explain-item">
+                                    <span class="explain-line">{ }</span>
+                                    <p>Curly braces group multiple statements into one block — the function body.</p>
+                                </div>
+                                <div class="explain-item">
+                                    <span class="explain-line">printf(...)</span>
+                                    <p>Function that prints text to the screen. Arguments go inside parentheses.</p>
+                                </div>
+                                <div class="explain-item">
+                                    <span class="explain-line">return 0;</span>
+                                    <p>Returns <code>0</code> to the operating system — convention for "program ran successfully".</p>
+                                </div>
+                                <div class="explain-item">
+                                    <span class="explain-line">;</span>
+                                    <p>Semicolons terminate every statement. Forgetting one is the #1 cause of errors!</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lesson-section">
+                            <h4>5. Output</h4>
+                            <pre class="output"><code>Hello World</code></pre>
+                        </div>
+
+                        <div class="lesson-section">
+                            <h4>6. Common Mistakes</h4>
+                            <div class="mistake-box">
+                                <div class="mistake-item">❌ Missing semicolon after <code>printf("Hello World")</code>.</div>
+                                <div class="mistake-item">❌ Writing <code>Main()</code> with capital M — C is case-sensitive.</div>
+                                <div class="mistake-item">❌ Forgetting to close curly brace <code>}</code> at the end.</div>
+                                <div class="mistake-item">❌ Using <code>Printf</code> instead of <code>printf</code>.</div>
+                            </div>
+                        </div>
+
+                        <div class="lesson-section">
+                            <h4>7. Practice Questions</h4>
+                            <ol class="practice-list">
+                                <li>Write a program that prints your name.</li>
+                                <li>Print your college name on one line and your branch on the next.</li>
+                                <li>Print a 3-line self-introduction using <code>printf</code>.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- LESSON 3: VARIABLES -->
+                <article class="lesson-card" data-lesson="variables" data-keywords="variables declaration naming rules int float char">
+                    <button class="lesson-header" aria-expanded="false">
+                        <div class="lesson-head-left">
+                            <span class="lesson-icon icon-green">🔢</span>
+                            <div>
+                                <span class="lesson-number">Lesson 03</span>
+                                <h3>Variables</h3>
+                            </div>
+                        </div>
+                        <span class="lesson-toggle" aria-hidden="true">+</span>
+                    </button>
+
+                    <div class="lesson-body">
+                        <div class="lesson-section">
+                            <h4>1. Introduction</h4>
+                            <p>Variables are <strong>named containers</strong> that store data in memory. Every variable has a type, a name, and a value that can change during program execution.</p>
+                        </div>
+
+                        <div class="lesson-section">
+                            <h4>2. Theory</h4>
+                            <div class="theory-grid">
+                                <div class="theory-item">
+                                    <h5>Definition</h5>
+                                    <p>A variable is a name given to a memory location that holds a value of a specific type.</p>
+                                </div>
+                                <div class="theory-item">
+                                    <h5>Declaration</h5>
+                                    <p>Variables must be declared before use with the syntax: <code>type name = value;</code></p>
+                                </div>
+                                <div class="theory-item">
+                                    <h5>Rules for Naming</h5>
+                                    <ul>
+                                        <li>Must begin with a letter or underscore (<code>_</code>)</li>
+                                        <li>Can contain letters, digits, and underscores only</li>
+                                        <li>Cannot be a reserved keyword (<code>int</code>, <code>return</code>, …)</li>
+                                        <li>Case-sensitive: <code>Age</code> ≠ <code>age</code></li>
+                                        <li>No spaces or special characters (!, @, #)</li>
+                                    </ul>
+                                </div>
+                                <div class="theory-item">
+                                    <h5>Naming Conventions</h5>
+                                    <ul>
+                                        <li>Use meaningful names: <code>age</code>, not <code>a</code></li>
+                                        <li>Use lowercase with underscores: <code>student_name</code></li>
+                                        <li>Avoid single-letter names except in loops</li>
+                                        <li>Constants use UPPERCASE: <code>MAX_VALUE</code></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lesson-section">
+                            <h4>3. Syntax</h4>
+                            <pre class="code"><code>data_type variable_name = value;</code></pre>
+                            <p>Examples of declarations:</p>
+                            <pre class="code"><code>int age = 18;
+float marks = 89.5;
+char grade = 'A';</code></pre>
+                        </div>
+
+                        <div class="lesson-section">
+                            <h4>4. Example</h4>
+                            <pre class="code"><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int age = 20;
+    float percentage = 86.5;
+    char grade = 'A';
+
+    printf("Age: %d\n", age);
+    printf("Percentage: %.2f\n", percentage);
+    printf("Grade: %c\n", grade);
+
+    return 0;
+}</code></pre>
+                        </div>
+
+                        <div class="lesson-section">
+                            <h4>5. Output</h4>
+                            <pre class="output"><code>Age: 20
+Percentage: 86.50
+Grade: A</code></pre>
+                        </div>
+
+                        <div class="lesson-section">
+                            <h4>6. Common Mistakes</h4>
+                            <div class="mistake-box">
+                                <div class="mistake-item">❌ <code>int 2age = 20;</code> — variable name can't start with a digit.</div>
+                                <div class="mistake-item">❌ <code>char grade = "A";</code> — use single quotes for chars, not double.</div>
+                                <div class="mistake-item">❌ Using a variable before declaring it.</div>
+                                <div class="mistake-item">❌ Wrong format specifier: <code>%d</code> for float, <code>%f</code> for int.</div>
+                            </div>
+                        </div>
+
+                        <div class="lesson-section">
+                            <h4>7. Practice Questions</h4>
+                            <ol class="practice-list">
+                                <li>Create a variable <code>age</code> and store your age. Print it.</li>
+                                <li>Store your name, age, and percentage in three variables and print all.</li>
+                                <li>Swap two integer variables <code>a</code> and <code>b</code> using a third variable.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- LESSON 4: DATA TYPES -->
+                <article class="lesson-card" data-lesson="data-types" data-keywords="data types int float double char void size memory storage integer character floating point">
+                    <button class="lesson-header" aria-expanded="false">
+                        <div class="lesson-head-left">
+                            <span class="lesson-icon icon-cyan">📦</span>
+                            <div>
+                                <span class="lesson-number">Lesson 04</span>
+                                <h3>Data Types</h3>
+                            </div>
+                        </div>
+                        <span class="lesson-toggle" aria-hidden="true">+</span>
+                    </button>
+
+                    <div class="lesson-body">
+                        <div class="lesson-section">
+                            <h4>1. Introduction</h4>
+                            <p>Every variable in C must have a <strong>data type</strong>. The data type tells the compiler what kind of data the variable will store (whole numbers, decimals, characters, or nothing) and how much memory to reserve. Choosing the right data type makes your program faster and more memory-efficient.</p>
+                        </div>
+
+                        <div class="lesson-section">
+                            <h4>2. Theory</h4>
+                            <p>C has <strong>4 primary data types</strong> plus <code>void</code>. They are the building blocks for all other types in C.</p>
+
+                            <!-- INT -->
+                            <div class="type-card t-cyan">
+                                <div class="type-card-head">
+                                    <h5>int</h5>
+                                    <span class="type-badge">Integer</span>
+                                </div>
+                                <div class="type-meta">
+                                    <div class="type-meta-item">
+                                        <span class="type-meta-label">Size</span>
+                                        <span class="type-meta-value">2 or 4 bytes</span>
+                                    </div>
+                                    <div class="type-meta-item">
+                                        <span class="type-meta-label">Range (typical)</span>
+                                        <span class="type-meta-value">-32,768 to 32,767</span>
+                                    </div>
+                                    <div class="type-meta-item">
+                                        <span class="type-meta-label">Format</span>
+                                        <span class="type-meta-value">%d</span>
+                                    </div>
+                                </div>
+                                <p><strong>Definition:</strong> Stores whole numbers (no decimal point) like 10, -5, 0, 1000.</p>
+                                <p><strong>Syntax:</strong> <code>int age = 20;</code></p>
+                                <p><strong>Usage:</strong> Counts, indexes, ages, marks — anywhere a decimal is not needed.</p>
+                            </div>
+
+                            <!-- FLOAT -->
+                            <div class="type-card t-green">
+                                <div class="type-card-head">
+                                    <h5>float</h5>
+                                    <span class="type-badge">Decimal</span>
+                                </div>
+                                <div class="type-meta">
+                                    <div class="type-meta-item">
+                                        <span class="type-meta-label">Size</span>
+                                        <span class="type-meta-value">4 bytes</span>
+                                    </div>
+                                    <div class="type-meta-item">
+                                        <span class="type-meta-label">Precision</span>
+                                        <span class="type-meta-value">~6 decimals</span>
+                                    </div>
+                                    <div class="type-meta-item">
+                                        <span class="type-meta-label">Format</span>
+                                        <span class="type-meta-value">%f</span>
+                                    </div>
+                                </div>
+                                <p><strong>Definition:</strong> Stores single-precision floating-point numbers (decimals).</p>
+                                <p><strong>Syntax:</strong> <code>float price = 19.99f;</code></p>
+                                <p><strong>Usage:</strong> Temperatures, prices, percentages where ~6 digit precision is enough.</p>
+                            </div>
+
+                            <!-- DOUBLE -->
+                            <div class="type-card t-amber">
+                                <div class="type-card-head">
+                                    <h5>double</h5>
+                                    <span class="type-badge">High Precision</span>
+                                </div>
+                                <div class="type-meta">
+                                    <div class="type-meta-item">
+                                        <span class="type-meta-label">Size</span>
+                                        <span class="type-meta-value">8 bytes</span>
+                                    </div>
+                                    <div class="type-meta-item">
+                                        <span class="type-meta-label">Precision</span>
+                                        <span class="type-meta-value">~15 decimals</span>
+                                    </div>
+                                    <div class="type-meta-item">
+                                        <span class="type-meta-label">Format</span>
+                                        <span class="type-meta-value">%lf</span>
+                                    </div>
+                                </div>
+                                <p><strong>Definition:</strong> Stores double-precision floating-point numbers (more accurate than float).</p>
+                                <p><strong>Syntax:</strong> <code>double pi = 3.14159265358979;</code></p>
+                                <p><strong>Usage:</strong> Scientific calculations, financial apps, anything needing high precision.</p>
+                            </div>
+
+                            <!-- CHAR -->
+                            <div class="type-card t-purple">
+                                <div class="type-card-head">
+                                    <h5>char</h5>
+                                    <span class="type-badge">Character</span>
+                                </div>
+                                <div class="type-meta">
+                                    <div class="type-meta-item">
+                                        <span class="type-meta-label">Size</span>
+                                        <span class="type-meta-value">1 byte</span>
+                                    </div>
+                                    <div class="type-meta-item">
+                                        <span class="type-meta-label">Range</span>
+                                        <span class="type-meta-value">-128 to 127</span>
+                                    </div>
+                                    <div class="type-meta-item">
+                                        <span class="type-meta-label">Format</span>
+                                        <span class="type-meta-value">%c</span>
+                                    </div>
+                                </div>
+                                <p><strong>Definition:</strong> Stores a single character inside single quotes — like <code>'A'</code>, <code>'7'</code>, <code>'$'</code>.</p>
+                                <p><strong>Syntax:</strong> <code>char grade = 'A';</code></p>
+                                <p><strong>Usage:</strong> Single letters, digits as characters, symbols, yes/no flags.</p>
+                            </div>
+
+                            <!-- VOID -->
+                            <div class="type-card t-pink">
+                                <div class="type-card-head">
+                                    <h5>void</h5>
+                                    <span class="type-badge">No Value</span>
+                                </div>
+                                <div class="type-meta">
+                                    <div class="type-meta-item">
+                                        <span class="type-meta-label">Size</span>
+                                        <span class="type-meta-value">0 bytes</span>
+                                    </div>
+                                    <div class="type-meta-item">
+                                        <span class="type-meta-label">Range</span>
+                                        <span class="type-meta-value">—</span>
+                                    </div>
+                                    <div class="type-meta-item">
+                                        <span class="type-meta-label">Format</span>
+                                        <span class="type-meta-value">—</span>
+                                    </div>
+                                </div>
+                                <p><strong>Definition:</strong> Means "nothing" or "no value". Used as a function's return type when nothing is returned, or as a generic pointer type.</p>
+                                <p><strong>Syntax:</strong> <code>void greet() { printf("Hi"); }</code></p>
+                                <p><strong>Usage:</strong> Functions that don't return a value, generic pointers <code>void *ptr</code>.</p>
+                            </div>
+                        </div>
+
+                        <div class="lesson-section">
+                            <h4>3. Syntax — Quick Reference Table</h4>
+                            <div class="data-table-wrap">
+                                <table class="data-table">
+                                    <thead>
+                                        <tr><th>Type</th><th>Size</th><th>Format Specifier</th><th>Example</th></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>int</td><td>2 / 4 bytes</td><td><code>%d</code></td><td><code>int x = 10;</code></td></tr>
+                                        <tr><td>float</td><td>4 bytes</td><td><code>%f</code></td><td><code>float x = 3.14f;</code></td></tr>
+                                        <tr><td>double</td><td>8 bytes</td><td><code>%lf</code></td><td><code>double x = 3.14159;</code></td></tr>
+                                        <tr><td>char</td><td>1 byte</td><td><code>%c</code></td><td><code>char x = 'A';</code></td></tr>
+                                        <tr><td>void</td><td>0 bytes</td><td>—</td><td><code>void func() { }</code></td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="lesson-section">
+                            <h4>4. Example</h4>
+                            <pre class="code"><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int age = 20;
+    float height = 5.8f;
+    double pi = 3.14159265358979;
+    char grade = 'A';
+
+    printf("Age: %d\n", age);
+    printf("Height: %.1f feet\n", height);
+    printf("Pi: %.10lf\n", pi);
+    printf("Grade: %c\n", grade);
+
+    return 0;
+}</code></pre>
+                        </div>
+
+                        <div class="lesson-section">
+                            <h4>5. Output</h4>
+                            <pre class="output"><code>Age: 20
+Height: 5.8 feet
+Pi: 3.1415926536
+Grade: A</code></pre>
+                        </div>
+
+                        <div class="lesson-section">
+                            <h4>6. Common Mistakes</h4>
+                            <div class="mistake-box">
+                                <div class="mistake-item">❌ Using <code>%d</code> for a <code>float</code> variable — use <code>%f</code> instead.</div>
+                                <div class="mistake-item">❌ Writing <code>char grade = "A";</code> — characters need <strong>single</strong> quotes, not double.</div>
+                                <div class="mistake-item">❌ Forgetting <code>%lf</code> when printing a <code>double</code> with <code>scanf</code>.</div>
+                                <div class="mistake-item">❌ Storing large numbers in <code>int</code> when they exceed its range — overflow gives wrong results.</div>
+                                <div class="mistake-item">❌ Treating <code>char</code> like a number without understanding ASCII values.</div>
+                            </div>
+                        </div>
+
+                        <div class="lesson-section">
+                            <h4>7. Practice Questions</h4>
+                            <ol class="practice-list">
+                                <li>Declare variables of all 5 data types and print them with the correct format specifiers.</li>
+                                <li>What is the output of <code>printf("%d", 'A');</code>? Why?</li>
+                                <li>Write a program that stores the value of PI (<code>3.14159</code>) in both <code>float</code> and <code>double</code> and prints both. Which is more accurate?</li>
+                                <li>What is the size of <code>int</code>, <code>float</code>, <code>double</code>, and <code>char</code> on your system? Use <code>sizeof()</code>.</li>
+                                <li>Can a <code>void</code> variable be declared? Why or why not?</li>
+                            </ol>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- LESSON 5: OPERATORS -->
+                <article class="lesson-card" data-lesson="operators" data-keywords="operators arithmetic relational logical assignment bitwise addition subtraction multiplication division modulo">
+                    <button class="lesson-header" aria-expanded="false">
+                        <div class="lesson-head-left">
+                            <span class="lesson-icon icon-amber">➕</span>
+                            <div>
+                                <span class="lesson-number">Lesson 05</span>
+                                <h3>Operators</h3>
+                            </div>
+                        </div>
+                        <span class="lesson-toggle" aria-hidden="true">+</span>
+                    </button>
+
+                    <div class="lesson-body">
+                        <div class="lesson-section">
+                            <h4>1. Introduction</h4>
+                            <p>Operators are <strong>symbols</strong> that perform operations on variables and values. C is rich in operators — without them, you can't do math, compare values, or build any logic. Mastering operators is essential for writing any real program.</p>
+                        </div>
+
+                        <div class="lesson-section">
+                            <h4>2. Theory</h4>
+
+                            <!-- ARITHMETIC -->
+                            <h5 style="margin-top:0.5rem;">➕ Arithmetic Operators</h5>
+                            <p>Perform basic mathematical operations on numeric values.</p>
+                            <div class="data-table-wrap">
+                                <table class="data-table">
+                                    <thead><tr><th>Operator</th><th>Meaning</th><th>Example</th><th>Result</th></tr></thead>
+                                    <tbody>
+                                        <tr><td><code>+</code></td><td>Addition</td><td><code>5 + 3</code></td><td>8</td></tr>
+                                        <tr><td><code>-</code></td><td>Subtraction</td><td><code>5 - 3</code></td><td>2</td></tr>
+                                        <tr><td><code>*</code></td><td>Multiplication</td><td><code>5 * 3</code></td><td>15</td></tr>
+                                        <tr><td><code>/</code></td><td>Division</td><td><code>10 / 3</code></td><td>3</td></tr>
+                                        <tr><td><code>%</code></td><td>Modulus (remainder)</td><td><code>10 % 3</code></td><td>1</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- RELATIONAL -->
+                            <h5 style="margin-top:1.25rem;">⚖️ Relational Operators</h5>
+                            <p>Compare two values. Return <code>1</code> (true) or <code>0</code> (false). Used heavily in conditions.</p>
+                            <div class="data-table-wrap">
+                                <table class="data-table">
+                                    <thead><tr><th>Operator</th><th>Meaning</th><th>Example</th><th>Result</th></tr></thead>
+                                    <tbody>
+                                        <tr><td><code>==</code></td><td>Equal to</td><td><code>5 == 5</code></td><td>1 (true)</td></tr>
+                                        <tr><td><code>!=</code></td><td>Not equal to</td><td><code>5 != 3</code></td><td>1 (true)</td></tr>
+                                        <tr><td><code>&gt;</code></td><td>Greater than</td><td><code>5 &gt; 3</code></td><td>1 (true)</td></tr>
+                                        <tr><td><code>&lt;</code></td><td>Less than</td><td><code>5 &lt; 3</code></td><td>0 (false)</td></tr>
+                                        <tr><td><code>&gt;=</code></td><td>Greater or equal</td><td><code>5 &gt;= 5</code></td><td>1 (true)</td></tr>
+                                        <tr><td><code>&lt;=</code></td><td>Less or equal</td><td><code>3 &lt;= 5</code></td><td>1 (true)</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- LOGICAL -->
+                            <h5 style="margin-top:1.25rem;">🔗 Logical Operators</h5>
+                            <p>Combine two or more conditions. Return true/false.</p>
+                            <div class="data-table-wrap">
+                                <table class="data-table">
+                                    <thead><tr><th>Operator</th><th>Meaning</th><th>Example</th><th>Result</th></tr></thead>
+                                    <tbody>
+                                        <tr><td><code>&amp;&amp;</code></td><td>Logical AND</td><td><code>(5&gt;3) &amp;&amp; (2&lt;4)</code></td><td>1 (true)</td></tr>
+                                        <tr><td><code>||</code></td><td>Logical OR</td><td><code>(5&gt;9) || (2&lt;4)</code></td><td>1 (true)</td></tr>
+                                        <tr><td><code>!</code></td><td>Logical NOT</td><td><code>!(5==5)</code></td><td>0 (false)</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- ASSIGNMENT -->
+                            <h5 style="margin-top:1.25rem;">📝 Assignment Operators</h5>
+                            <p>Assign values to variables, often combined with arithmetic.</p>
+                            <div class="data-table-wrap">
+                                <table class="data-table">
+                                    <thead><tr><th>Operator</th><th>Example</th><th>Equivalent To</th></tr></thead>
+                                    <tbody>
+                                        <tr><td><code>=</code></td><td><code>x = 5</code></td><td>Assign 5 to x</td></tr>
+                                        <tr><td><code>+=</code></td><td><code>x += 3</code></td><td><code>x = x + 3</code></td></tr>
+                                        <tr><td><code>-=</code></td><td><code>x -= 3</code></td><td><code>x = x - 3</code></td></tr>
+                                        <tr><td><code>*=</code></td><td><code>x *= 3</code></td><td><code>x = x * 3</code></td></tr>
+                                        <tr><td><code>/=</code></td><td><code>x /= 3</code></td><td><code>x = x / 3</code></td></tr>
+                                        <tr><td><code>%=</code></td><td><code>x %= 3</code></td><td><code>x = x % 3</code></td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- BITWISE -->
+                            <h5 style="margin-top:1.25rem;">⚙️ Bitwise Operators</h5>
+                            <p>Operate on <strong>individual bits</strong> of integers. Used in low-level programming, embedded systems, and optimization.</p>
+                            <div class="data-table-wrap">
+                                <table class="data-table">
+                                    <thead><tr><th>Operator</th><th>Meaning</th><th>Example (a=5, b=3)</th><th>Result</th></tr></thead>
+                                    <tbody>
+                                        <tr><td><code>&amp;</code></td><td>Bitwise AND</td><td><code>5 &amp; 3</code></td><td>1</td></tr>
+                                        <tr><td><code>|</code></td><td>Bitwise OR</td><td><code>5 | 3</code></td><td>7</td></tr>
+                                        <tr><td><code>^</code></td><td>Bitwise XOR</td><td><code>5 ^ 3</code></td><td>6</td></tr>
+                                        <tr><td><code>~</code></td><td>Bitwise NOT</td><td><code>~5</code></td><td>-6</td></tr>
+                                        <tr><td><code>&lt;&lt;</code></td><td>Left shift</td><td><code>5 &lt;&lt; 1</code></td><td>10</td></tr>
+                                        <tr><td><code>&gt;&gt;</code></td><td>Right shift</td><td><code>5 &gt;&gt; 1</code></td><td>2</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="lesson-section">
+                            <h4>3. Syntax</h4>
+                            <pre class="code"><code>// Arithmetic
+int sum = 10 + 5;       // 15
+int rem = 10 % 3;       // 1
+
+// Relational (result is 0 or 1)
+int isAdult = (age >= 18);
+
+// Logical
+int ok = (marks &gt;= 35) &amp;&amp; (attendance &gt;= 75);
+
+// Assignment shorthand
+x += 5;   // same as x = x + 5
+
+// Bitwise
+int flags = a &amp; b;</code></pre>
+                        </div>
+
+                        <div class="lesson-section">
+                            <h4>4. Example</h4>
+                            <pre class="code"><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int a = 10, b = 3;
+
+    // Arithmetic
+    printf("a + b = %d\n", a + b);
+    printf("a %% b = %d\n", a % b);
+
+    // Relational
+    printf("a &gt; b : %d\n", a &gt; b);
+
+    // Logical
+    int result = (a &gt; 5) &amp;&amp; (b &lt; 5);
+    printf("(a&gt;5) &amp;&amp; (b&lt;5) : %d\n", result);
+
+    // Assignment
+    a += 5;   // a becomes 15
+    printf("a after += 5 : %d\n", a);
+
+    // Bitwise
+    printf("5 &amp; 3 = %d\n", 5 &amp; 3);     // 1
+    printf("5 &lt;&lt; 1 = %d\n", 5 &lt;&lt; 1); // 10
+
+    return 0;
+}</code></pre>
+                        </div>
+
+                        <div class="lesson-section">
+                            <h4>5. Output</h4>
+                            <pre class="output"><code>a + b = 13
+a % b = 1
+a &gt; b : 1
+(a&gt;5) &amp;&amp; (b&lt;5) : 1
+a after += 5 : 15
+5 &amp; 3 = 1
+5 &lt;&lt; 1 = 10</code></pre>
+                        </div>
+
+                        <div class="lesson-section">
+                            <h4>6. Common Mistakes</h4>
+                            <div class="mistake-box">
+                                <div class="mistake-item">❌ Confusing <code>=</code> (assignment) with <code>==</code> (comparison). <code>if (x = 5)</code> assigns, <code>if (x == 5)</code> compares.</div>
+                                <div class="mistake-item">❌ Dividing two <code>int</code> values and expecting a decimal: <code>5/2</code> is <code>2</code>, not <code>2.5</code>.</div>
+                                <div class="mistake-item">❌ Using <code>%</code> on floats — modulus only works with integers.</div>
+                                <div class="mistake-item">❌ Writing <code>&amp;&amp;</code> as <code>&amp;</code> or <code>||</code> as <code>|</code> — they are different operators (logical vs bitwise).</div>
+                                <div class="mistake-item">❌ Trying to use bitwise operators on <code>float</code> or <code>double</code> — only integers allowed.</div>
+                            </div>
+                        </div>
+
+                        <div class="lesson-section">
+                            <h4>7. Practice Questions</h4>
+                            <ol class="practice-list">
+                                <li>Write a program that takes two integers and prints their sum, difference, product, quotient and remainder.</li>
+                                <li>Predict the output: <code>printf("%d", 9 / 2);</code> and <code>printf("%f", 9.0 / 2);</code>. Why are they different?</li>
+                                <li>Write a program to check if a number is even or odd using the <code>%</code> operator.</li>
+                                <li>Evaluate: <code>(10 &gt; 5) &amp;&amp; (3 == 4)</code> — what does it return?</li>
+                                <li>What is the result of <code>12 &amp; 10</code>? Try working it out bit-by-bit (binary).</li>
+                                <li>Use a bitwise left shift to multiply a number by 8. Compare with <code>* 8</code>.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- LESSON 6: INPUT & OUTPUT -->
+                <article class="lesson-card" data-lesson="io" data-keywords="input output printf scanf getchar putchar format specifier stdio">
+                    <button class="lesson-header" aria-expanded="false">
+                        <div class="lesson-head-left">
+                            <span class="lesson-icon icon-green">⌨️</span>
+                            <div>
+                                <span class="lesson-number">Lesson 06</span>
+                                <h3>Input &amp; Output</h3>
+                            </div>
+                        </div>
+                        <span class="lesson-toggle" aria-hidden="true">+</span>
+                    </button>
+
+                    <div class="lesson-body">
+                        <div class="lesson-section">
+                            <h4>1. Introduction</h4>
+                            <p>C handles input and output through functions in <code>&lt;stdio.h&gt;</code>. Without I/O, a program is useless — it can't talk to the user. This lesson covers the four most important I/O functions every beginner must master.</p>
+                        </div>
+
+                        <div class="lesson-section">
+                            <h4>2. Theory</h4>
+
+                            <!-- PRINTF -->
+                            <div class="type-card t-cyan">
+                                <div class="type-card-head">
+                                    <h5>printf()</h5>
+                                    <span class="type-badge">Output</span>
+                                </div>
+                                <p><strong>Purpose:</strong> Prints formatted text and values to the screen.</p>
+                                <p><strong>Syntax:</strong> <code>printf("format", arg1, arg2, ...);</strong></p>
+                                <p><strong>Common format specifiers:</strong></p>
+                                <ul>
+                                    <li><code>%d</code> or <code>%i</code> — integer</li>
+                                    <li><code>%f</code> — float / double</li>
+                                    <li><code>%c</code> — single character</li>
+                                    <li><code>%s</code> — string</li>
+                                    <li><code>%lf</code> — double (for <code>scanf</code>)</li>
+                                    <li><code>\n</code> — newline</li>
+                                    <li><code>\t</code> — tab</li>
+                                </ul>
+                            </div>
+
+                            <!-- SCANF -->
+                            <div class="type-card t-green">
+                                <div class="type-card-head">
+                                    <h5>scanf()</h5>
+                                    <span class="type-badge">Input</span>
+                                </div>
+                                <p><strong>Purpose:</strong> Reads formatted input from the keyboard.</p>
+                                <p><strong>Syntax:</strong> <code>scanf("format", &amp;variable);</code></p>
+                                <p><strong>Important:</strong> Variables (except arrays) must be passed with the <strong>address-of</strong> operator <code>&amp;</code>.</p>
+                                <ul>
+                                    <li><code>scanf("%d", &amp;age);</code> — reads an integer</li>
+                                    <li><code>scanf("%lf", &amp;price);</code> — reads a double</li>
+                                    <li><code>scanf("%c", &amp;ch);</code> — reads a character</li>
+                                </ul>
+                            </div>
+
+                            <!-- GETCHAR -->
+                            <div class="type-card t-amber">
+                                <div class="type-card-head">
+                                    <h5>getchar()</h5>
+                                    <span class="type-badge">Single Char Input</span>
+                                </div>
+                                <p><strong>Purpose:</strong> Reads <strong>one single character</strong> from the keyboard (waits for Enter).</p>
+                                <p><strong>Syntax:</strong> <code>char ch = getchar();</code></p>
+                                <p><strong>Usage:</strong> Reading one character at a time — useful for menus and y/n prompts.</p>
+                            </div>
+
+                            <!-- PUTCHAR -->
+                            <div class="type-card t-purple">
+                                <div class="type-card-head">
+                                    <h5>putchar()</h5>
+                                    <span class="type-badge">Single Char Output</span>
+                                </div>
+                                <p><strong>Purpose:</strong> Prints <strong>one single character</strong> to the screen.</p>
+                                <p><strong>Syntax:</strong> <code>putchar(ch);</code></p>
+                                <p><strong>Usage:</strong> Quick character output — equivalent to <code>printf("%c", ch);</code>.</p>
+                            </div>
+                        </div>
+
+                        <div class="lesson-section">
+                            <h4>3. Syntax — Quick Comparison</h4>
+                            <div class="data-table-wrap">
+                                <table class="data-table">
+                                    <thead><tr><th>Function</th><th>Direction</th><th>Header</th><th>Reads / Prints</th></tr></thead>
+                                    <tbody>
+                                        <tr><td><code>printf</code></td><td>Output</td><td><code>&lt;stdio.h&gt;</code></td><td>Formatted text &amp; values</td></tr>
+                                        <tr><td><code>scanf</code></td><td>Input</td><td><code>&lt;stdio.h&gt;</code></td><td>Formatted keyboard input</td></tr>
+                                        <tr><td><code>getchar</code></td><td>Input</td><td><code>&lt;stdio.h&gt;</code></td><td>One character</td></tr>
+                                        <tr><td><code>putchar</code></td><td>Output</td><td><code>&lt;stdio.h&gt;</code></td><td>One character</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="lesson-section">
+                            <h4>4. Example</h4>
+                            <pre class="code"><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int age;
+    char initial;
+
+    // printf + scanf
+    printf("Enter your age: ");
+    scanf("%d", &amp;age);
+    printf("You are %d years old.\n", age);
+
+    // getchar + putchar
+    printf("Enter your initial: ");
+    getchar();             // consume leftover newline
+    initial = getchar();
+    printf("Your initial is: ");
+    putchar(initial);
+    putchar('\n');
+
+    return 0;
+}</code></pre>
+                        </div>
+
+                        <div class="lesson-section">
+                            <h4>5. Output</h4>
+                            <pre class="output"><code>Enter your age: 20
+You are 20 years old.
+Enter your initial: S
+Your initial is: S</code></pre>
+                        </div>
+
+                        <div class="lesson-section">
+                            <h4>6. Common Mistakes</h4>
+                            <div class="mistake-box">
+                                <div class="mistake-item">❌ Forgetting <code>&amp;</code> in <code>scanf</code>: <code>scanf("%d", age);</code> instead of <code>scanf("%d", &amp;age);</code>.</div>
+                                <div class="mistake-item">❌ Using <code>%f</code> for a <code>double</code> in <code>scanf</code> — must use <code>%lf</code>.</div>
+                                <div class="mistake-item">❌ Mismatched format specifiers: printing a <code>char</code> with <code>%d</code>, etc.</div>
+                                <div class="mistake-item">❌ <code>scanf("%c", &amp;ch);</code> reading the leftover newline from the previous input — call an extra <code>getchar();</code> to consume it.</div>
+                                <div class="mistake-item">❌ Forgetting to <code>#include &lt;stdio.h&gt;</code> — every I/O function needs this header.</div>
+                            </div>
+                        </div>
+
+                        <div class="lesson-section">
+                            <h4>7. Practice Questions</h4>
+                            <ol class="practice-list">
+                                <li>Write a program that asks the user's name and age, then prints a greeting like: <em>"Hello Shyam, you are 20 years old."</em></li>
+                                <li>Read two integers using <code>scanf</code> and print their sum.</li>
+                                <li>Read a character using <code>getchar</code> and print it using both <code>putchar</code> and <code>printf</code>.</li>
+                                <li>Read a float value with <code>scanf("%f", ...)</code> — does it work? What about <code>scanf("%lf", ...)</code>? Why the difference?</li>
+                                <li>Try reading a character right after an integer. Why is the program skipping input? Fix it.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- LESSON 7: DECISION MAKING -->
+                <article class="lesson-card" data-lesson="decision-making" data-keywords="decision making if else switch nested if condition flow control">
+                    <button class="lesson-header" aria-expanded="false">
+                        <div class="lesson-head-left">
+                            <span class="lesson-icon icon-cyan">🔀</span>
+                            <div>
+                                <span class="lesson-number">Lesson 07</span>
+                                <h3>Decision Making</h3>
+                            </div>
+                        </div>
+                        <span class="lesson-toggle" aria-hidden="true">+</span>
+                    </button>
+
+                    <div class="lesson-body">
+                        <div class="lesson-section">
+                            <h4>1. Introduction</h4>
+                            <p>Decision-making statements let your program <strong>choose</strong> between different paths based on conditions. Without them, every program would only run top-to-bottom. These are the building blocks of all real-world logic.</p>
+                        </div>
+
+                        <div class="lesson-section">
+                            <h4>2. Theory &amp; Syntax</h4>
+
+                            <!-- IF -->
+                            <div class="type-card t-cyan">
+                                <div class="type-card-head">
+                                    <h5>if statement</h5>
+                                    <span class="type-badge">Single Choice</span>
+                                </div>
+                                <p><strong>Theory:</strong> Runs a block of code <em>only if</em> the condition is true. If false, the block is skipped.</p>
+                                <p><strong>Syntax:</strong></p>
+                                <pre class="code"><code>if (condition) {
+    // runs only when condition is true
+}</code></pre>
+                            </div>
+
+                            <!-- IF-ELSE -->
+                            <div class="type-card t-green">
+                                <div class="type-card-head">
+                                    <h5>if-else</h5>
+                                    <span class="type-badge">Two Choices</span>
+                                </div>
+                                <p><strong>Theory:</strong> One block runs if the condition is true, the other if it is false. Guarantees one path always executes.</p>
+                                <p><strong>Syntax:</strong></p>
+                                <pre class="code"><code>if (condition) {
+    // true block
+} else {
+    // false block
+}</code></pre>
+                            </div>
+
+                            <!-- NESTED IF -->
+                            <div class="type-card t-amber">
+                                <div class="type-card-head">
+                                    <h5>nested if</h5>
+                                    <span class="type-badge">Multiple Levels</span>
+                                </div>
+                                <p><strong>Theory:</strong> An <code>if</code> inside another <code>if</code>. Used when decisions depend on previous decisions (e.g., login → role check → action).</p>
+                                <p><strong>Syntax:</strong></p>
+                                <pre class="code"><code>if (condition1) {
+    if (condition2) {
+        // both true
+    }
+}</code></pre>
+                            </div>
+
+                            <!-- SWITCH -->
+                            <div class="type-card t-purple">
+                                <div class="type-card-head">
+                                    <h5>switch</h5>
+                                    <span class="type-badge">Multi-way</span>
+                                </div>
+                                <p><strong>Theory:</strong> Replaces long if-else chains when comparing <strong>one variable</strong> against many fixed values (like menu choices).</p>
+                                <p><strong>Syntax:</strong></p>
+                                <pre class="code"><code>switch (expression) {
+    case value1:
+        // ...
+        break;
+    case value2:
+        // ...
+        break;
+    default:
+        // none matched
+}</code></pre>
+                                <p style="margin-top:0.5rem;"><strong>Important:</strong> Without <code>break;</code>, execution "falls through" to the next case.</p>
+                            </div>
+                        </div>
+
+                        <div class="lesson-section">
+                            <h4>3. Syntax — Comparison Table</h4>
+                            <div class="data-table-wrap">
+                                <table class="data-table">
+                                    <thead><tr><th>Statement</th><th>Best For</th><th>Tests</th></tr></thead>
+                                    <tbody>
+                                        <tr><td><code>if</code></td><td>Single condition</td><td>One true/false</td></tr>
+                                        <tr><td><code>if-else</code></td><td>Two-way branching</td><td>True vs false</td></tr>
+                                        <tr><td><code>nested if</code></td><td>Dependent conditions</td><td>Many levels deep</td></tr>
+                                        <tr><td><code>switch</code></td><td>Many fixed values</td><td>Equality with constants</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="lesson-section">
+                            <h4>4. Example</h4>
+                            <pre class="code"><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int marks = 78;
+
+    // if-else
+    if (marks &gt;= 35) {
+        printf("Result: PASS\n");
+    } else {
+        printf("Result: FAIL\n");
+    }
+
+    // nested if
+    if (marks &gt;= 35) {
+        if (marks &gt;= 75) {
+            printf("Grade: A\n");
+        } else {
+            printf("Grade: B\n");
+        }
+    }
+
+    // switch
+    int choice = 2;
+    switch (choice) {
+        case 1:
+            printf("You chose Tea\n");
+            break;
+        case 2:
+            printf("You chose Coffee\n");
+            break;
+        case 3:
+            printf("You chose Milk\n");
+            break;
+        default:
+            printf("Invalid choice\n");
+    }
+
+    return 0;
+}</code></pre>
+                        </div>
+
+                        <div class="lesson-section">
+                            <h4>5. Output</h4>
+                            <pre class="output"><code>Result: PASS
+Grade: A
+You chose Coffee</code></pre>
+                        </div>
+
+                        <div class="lesson-section">
+                            <h4>6. Common Mistakes</h4>
+                            <div class="mistake-box">
+                                <div class="mistake-item">❌ Using <code>=</code> instead of <code>==</code> in conditions: <code>if (x = 5)</code> assigns, doesn't compare.</div>
+                                <div class="mistake-item">❌ Forgetting braces <code>{ }</code> — only the very next statement belongs to the <code>if</code>.</div>
+                                <div class="mistake-item">❌ Putting <code>;</code> right after <code>if (cond);</code> — the <code>;</code> ends the statement and the block runs unconditionally.</div>
+                                <div class="mistake-item">❌ Forgetting <code>break</code> in <code>switch</code> cases — execution falls through to the next case.</div>
+                                <div class="mistake-item">❌ Using <code>switch</code> with <code>float</code> or <code>string</code> — only <code>int</code> and <code>char</code> are allowed.</div>
+                            </div>
+                        </div>
+
+                        <div class="lesson-section">
+                            <h4>7. Practice Questions</h4>
+                            <ol class="practice-list">
+                                <li>Write a program that checks if a number entered by the user is positive, negative, or zero.</li>
+                                <li>Find the largest of three numbers using <code>nested if</code>.</li>
+                                <li>Write a program that assigns grades (A/B/C/D/F) based on marks using <code>if-else if</code>.</li>
+                                <li>Build a simple menu using <code>switch</code> — options: 1 = Add, 2 = Subtract, 3 = Exit.</li>
+                                <li>What happens if you remove <code>break</code> from a <code>switch</code> case? Test it.</li>
+                                <li>Can you use a <code>switch</code> on a <code>float</code> value like <code>switch(price)</code>? Why or why not?</li>
+                            </ol>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- LESSON 8: LOOPS -->
+                <article class="lesson-card" data-lesson="loops" data-keywords="loops for while do while break continue iteration repetition nested loop">
+                    <button class="lesson-header" aria-expanded="false">
+                        <div class="lesson-head-left">
+                            <span class="lesson-icon icon-green">🔁</span>
+                            <div>
+                                <span class="lesson-number">Lesson 08</span>
+                                <h3>Loops</h3>
+                            </div>
+                        </div>
+                        <span class="lesson-toggle" aria-hidden="true">+</span>
+                    </button>
+
+                    <div class="lesson-body">
+                        <div class="lesson-section">
+                            <h4>1. Introduction</h4>
+                            <p>Loops let you <strong>repeat</strong> a block of code multiple times without writing it again. Printing 1 to 1000 by hand would be 1000 <code>printf</code> statements — a loop does it in 3 lines. Loops are at the heart of almost every program.</p>
+                        </div>
+
+                        <div class="lesson-section">
+                            <h4>2. Theory &amp; Syntax</h4>
+
+                            <!-- FOR -->
+                            <div class="type-card t-cyan">
+                                <div class="type-card-head">
+                                    <h5>for loop</h5>
+                                    <span class="type-badge">Counted</span>
+                                </div>
+                                <p><strong>Theory:</strong> Best when you know in advance <strong>how many times</strong> to repeat. Has 3 parts in one line: initialize, condition, update.</p>
+                                <p><strong>Syntax:</strong></p>
+                                <pre class="code"><code>for (initialization; condition; update) {
+    // body
+}</code></pre>
+                                <p><strong>Flow:</strong> init → check condition → run body → update → repeat.</p>
+                            </div>
+
+                            <!-- WHILE -->
+                            <div class="type-card t-green">
+                                <div class="type-card-head">
+                                    <h5>while loop</h5>
+                                    <span class="type-badge">Condition-based</span>
+                                </div>
+                                <p><strong>Theory:</strong> Best when you don't know the count, only the condition. Tests the condition <strong>before</strong> each iteration.</p>
+                                <p><strong>Syntax:</strong></p>
+                                <pre class="code"><code>while (condition) {
+    // body
+}</code></pre>
+                                <p><strong>Flow:</strong> check condition → run body → repeat. If false at start, body never runs.</p>
+                            </div>
+
+                            <!-- DO WHILE -->
+                            <div class="type-card t-amber">
+                                <div class="type-card-head">
+                                    <h5>do-while loop</h5>
+                                    <span class="type-badge">Run-at-least-once</span>
+                                </div>
+                                <p><strong>Theory:</strong> Like <code>while</code>, but the body runs <strong>at least once</strong> before checking the condition.</p>
+                                <p><strong>Syntax:</strong></p>
+                                <pre class="code"><code>do {
+    // body
+} while (condition);</code></pre>
+                                <p><strong>Flow:</strong> run body → check condition → repeat. Note the <code>;</code> after <code>while</code>.</p>
+                            </div>
+
+                            <!-- BREAK -->
+                            <div class="type-card t-purple">
+                                <div class="type-card-head">
+                                    <h5>break</h5>
+                                    <span class="type-badge">Exit Loop</span>
+                                </div>
+                                <p><strong>Theory:</strong> Immediately <strong>exits</strong> the current loop, regardless of the condition. Useful when you found what you were looking for.</p>
+                                <p><strong>Syntax:</strong></p>
+                                <pre class="code"><code>for (...) {
+    if (something) break;
+}</code></pre>
+                            </div>
+
+                            <!-- CONTINUE -->
+                            <div class="type-card t-pink">
+                                <div class="type-card-head">
+                                    <h5>continue</h5>
+                                    <span class="type-badge">Skip Iteration</span>
+                                </div>
+                                <p><strong>Theory:</strong> <strong>Skips the rest</strong> of the current iteration and jumps to the next one. Loop does not stop — just this round.</p>
+                                <p><strong>Syntax:</strong></p>
+                                <pre class="code"><code>for (...) {
+    if (skipThis) continue;
+    // code below is skipped this round
+}</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="lesson-section">
+                            <h4>3. Syntax — Comparison Table</h4>
+                            <div class="data-table-wrap">
+                                <table class="data-table">
+                                    <thead><tr><th>Loop</th><th>When To Use</th><th>Runs Body When</th><th>Min. Runs</th></tr></thead>
+                                    <tbody>
+                                        <tr><td><code>for</code></td><td>Known count</td><td>Condition true</td><td>0 times</td></tr>
+                                        <tr><td><code>while</code></td><td>Unknown count</td><td>Condition true</td><td>0 times</td></tr>
+                                        <tr><td><code>do-while</code></td><td>Must run once</td><td>Condition true (after body)</td><td>1 time</td></tr>
+                                        <tr><td><code>break</code></td><td>Early exit needed</td><td>—</td><td>—</td></tr>
+                                        <tr><td><code>continue</code></td><td>Skip current round</td><td>—</td><td>—</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="lesson-section">
+                            <h4>4. Example</h4>
+                            <pre class="code"><code>#include &lt;stdio.h&gt;
+
+int main() {
+    // for — print 1 to 5
+    printf("for loop:\n");
+    for (int i = 1; i &lt;= 5; i++) {
+        printf("%d ", i);
+    }
+    printf("\n");
+
+    // while — countdown
+    printf("while loop:\n");
+    int n = 3;
+    while (n &gt; 0) {
+        printf("%d ", n);
+        n--;
+    }
+    printf("\n");
+
+    // do-while — at least once
+    printf("do-while loop:\n");
+    int x = 0;
+    do {
+        printf("%d ", x);
+        x++;
+    } while (x &lt; 3);
+    printf("\n");
+
+    // break — stop early
+    printf("break:\n");
+    for (int i = 1; i &lt;= 10; i++) {
+        if (i == 6) break;
+        printf("%d ", i);
+    }
+    printf("\n");
+
+    // continue — skip 3
+    printf("continue (skip 3):\n");
+    for (int i = 1; i &lt;= 5; i++) {
+        if (i == 3) continue;
+        printf("%d ", i);
+    }
+    printf("\n");
+
+    return 0;
+}</code></pre>
+                        </div>
+
+                        <div class="lesson-section">
+                            <h4>5. Output</h4>
+                            <pre class="output"><code>for loop:
+1 2 3 4 5
+while loop:
+3 2 1
+do-while loop:
+0 1 2
+break:
+1 2 3 4 5
+continue (skip 3):
+1 2 4 5</code></pre>
+                        </div>
+
+                        <div class="lesson-section">
+                            <h4>6. Common Mistakes</h4>
+                            <div class="mistake-box">
+                                <div class="mistake-item">❌ Missing the update in <code>for</code>: <code>for (int i=0; i&lt;5; )</code> — infinite loop.</div>
+                                <div class="mistake-item">❌ Writing <code>while (i &lt; 5);</code> with a stray semicolon — body becomes empty, loop never ends.</div>
+                                <div class="mistake-item">❌ Forgetting to update the counter in <code>while</code> — same infinite-loop trap.</div>
+                                <div class="mistake-item">❌ Using <code>=</code> instead of <code>==</code> in loop conditions.</div>
+                                <div class="mistake-item">❌ Putting <code>;</code> after <code>while(...);</code> in <code>do-while</code> outside the statement — actually this one is required; just don't miss it entirely.</div>
+                                <div class="mistake-item">❌ Confusing <code>break</code> (exits loop) with <code>continue</code> (skips round). Both useful, different jobs.</div>
+                            </div>
+                        </div>
+
+                        <div class="lesson-section">
+                            <h4>7. Practice Questions</h4>
+                            <ol class="practice-list">
+                                <li>Print numbers from 1 to 100 using all three loops (<code>for</code>, <code>while</code>, <code>do-while</code>).</li>
+                                <li>Print the sum of the first <code>n</code> natural numbers (e.g., 1+2+...+n).</li>
+                                <li>Print the multiplication table of a number entered by the user.</li>
+                                <li>Find the factorial of a number using a loop.</li>
+                                <li>Print all even numbers between 1 and 50 using <code>continue</code> to skip odd ones.</li>
+                                <li>Stop a loop using <code>break</code> as soon as the user enters a negative number.</li>
+                                <li>Predict the output of a <code>do-while</code> loop when the condition is false from the start. (Hint: runs once.)</li>
+                            </ol>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="no-results" id="noResults" hidden>
+                <span class="no-results-icon">🔍</span>
+                <h3>No lessons found</h3>
+                <p>Try a different search term.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============= FOOTER ============= -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span class="logo-icon">&lt;/&gt;</span>
+                        <span class="logo-text">C Programming<span class="logo-accent">Hub</span></span>
+                    </a>
+                    <p class="footer-tagline">Learn • Practice • Build</p>
+                </div>
+                <div class="footer-meta">
+                    <p>Made with ❤️ by <strong>Shyam</strong></p>
+                    <p class="version">Version 0.4.1</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 C Programming Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/learn.js"></script>
+
+    <!-- Shared toast for "Coming Soon" notifications -->
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

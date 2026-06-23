@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Complete C Cheat Sheet & Syntax Reference — revise an entire semester of C programming in one place. Keywords, data types, operators, functions, pointers, file handling and more.">
+    <meta name="author" content="Shyam">
+    <title>C Cheat Sheet & Syntax Reference | C Programming Hub</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/syntax.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ============= NAVBAR ============= -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">&lt;/&gt;</span>
+                <span class="logo-text">C Programming<span class="logo-accent">Hub</span></span>
+            </a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="learn.html" class="nav-link">Learn</a></li>
+                <li><a href="syntax.html" class="nav-link active">Syntax</a></li>
+                <li><a href="programs.html" class="nav-link">Programs</a></li>
+                <li><a href="#" class="nav-link nav-disabled" data-soon="Lab Exams page coming soon">Lab Exams <span class="soon-pill">Soon</span></a></li>
+                <li><a href="#" class="nav-link nav-disabled" data-soon="Viva page coming soon">Viva <span class="soon-pill">Soon</span></a></li>
+                <li><a href="#" class="nav-link nav-disabled" data-soon="Projects page coming soon">Projects <span class="soon-pill">Soon</span></a></li>
+            </ul>
+
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ============= HERO ============= -->
+    <section class="page-hero">
+        <div class="page-hero-bg">
+            <div class="floating-icon fi-1">⚡</div>
+            <div class="floating-icon fi-2">📚</div>
+            <div class="floating-icon fi-3">🔤</div>
+            <div class="floating-icon fi-4">⚙️</div>
+        </div>
+        <div class="container page-hero-content">
+            <div class="page-badge">
+                <span class="badge-dot"></span> Quick Revision • Exam Ready
+            </div>
+            <h1 class="page-title">
+                ⚡ C Cheat Sheet &amp; <span class="gradient-text">Syntax Reference</span>
+            </h1>
+            <p class="page-subtitle">
+                Quickly revise C Programming concepts, syntax, keywords, functions, operators, and important exam topics — all from one place.
+            </p>
+            <a href="#global-search" class="btn btn-primary">
+                Start Revising
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+
+            <div class="quick-stats">
+                <div class="qs-item"><strong>32</strong><span>Keywords</span></div>
+                <div class="qs-item"><strong>23</strong><span>Topics</span></div>
+                <div class="qs-item"><strong>100+</strong><span>Code Examples</span></div>
+                <div class="qs-item"><strong>1</strong><span>Page</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============= GLOBAL SEARCH ============= -->
+    <section class="search-section" id="global-search">
+        <div class="container">
+            <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input type="search" id="cheatSearch" placeholder="Search cheat sheet (try: pointer, strlen, %d, struct, malloc...)" aria-label="Search cheat sheet">
+                <button class="search-clear" id="searchClear" aria-label="Clear search">×</button>
+                <span class="search-count" id="searchCount"></span>
+            </div>
+            <p class="search-hint">Search across titles, keywords, syntax, examples, functions, operators, header files &amp; concepts.</p>
+        </div>
+    </section>
+
+    <!-- ============= MAIN CONTENT ============= -->
+    <main class="container cheat-content" id="cheatContent">
+
+        <!-- SECTION 3 — C KEYWORDS -->
+        <section class="cheat-section" id="keywords" data-title="C Keywords">
+            <div class="cheat-header">
+                <span class="cheat-num">01</span>
+                <h2>C Keywords</h2>
+                <span class="difficulty-tag difficulty-beginner">🟢 Beginner</span>
+            </div>
+            <p class="cheat-intro">C has <strong>32 reserved keywords</strong> that cannot be used as variable names. Click any keyword to copy it.</p>
+
+            <div class="keywords-grid" id="keywordsGrid">
+                <!-- 32 keyword cards -->
+                <div class="kw-card" data-keyword="auto"><span class="kw-name">auto</span><span class="kw-cat">Storage</span><span class="kw-desc">Default storage class for local variables.</span><button class="copy-mini" aria-label="Copy auto">📋</button></div>
+                <div class="kw-card" data-keyword="break"><span class="kw-name">break</span><span class="kw-cat">Jump</span><span class="kw-desc">Exits the nearest loop or switch case.</span><button class="copy-mini" aria-label="Copy break">📋</button></div>
+                <div class="kw-card" data-keyword="case"><span class="kw-name">case</span><span class="kw-cat">Decision</span><span class="kw-desc">A branch in a switch statement.</span><button class="copy-mini" aria-label="Copy case">📋</button></div>
+                <div class="kw-card" data-keyword="char"><span class="kw-name">char</span><span class="kw-cat">Data Type</span><span class="kw-desc">Single character (1 byte).</span><button class="copy-mini" aria-label="Copy char">📋</button></div>
+                <div class="kw-card" data-keyword="const"><span class="kw-name">const</span><span class="kw-cat">Qualifier</span><span class="kw-desc">Variable value cannot be modified.</span><button class="copy-mini" aria-label="Copy const">📋</button></div>
+                <div class="kw-card" data-keyword="continue"><span class="kw-name">continue</span><span class="kw-cat">Jump</span><span class="kw-desc">Skips the rest of current loop iteration.</span><button class="copy-mini" aria-label="Copy continue">📋</button></div>
+                <div class="kw-card" data-keyword="default"><span class="kw-name">default</span><span class="kw-cat">Decision</span><span class="kw-desc">Fallback branch in switch.</span><button class="copy-mini" aria-label="Copy default">📋</button></div>
+                <div class="kw-card" data-keyword="do"><span class="kw-name">do</span><span class="kw-cat">Loop</span><span class="kw-desc">Starts a do-while loop.</span><button class="copy-mini" aria-label="Copy do">📋</button></div>
+                <div class="kw-card" data-keyword="double"><span class="kw-name">double</span><span class="kw-cat">Data Type</span><span class="kw-desc">Double-precision floating point.</span><button class="copy-mini" aria-label="Copy double">📋</button></div>
+                <div class="kw-card" data-keyword="else"><span class="kw-name">else</span><span class="kw-cat">Decision</span><span class="kw-desc">Alternate branch of if.</span><button class="copy-mini" aria-label="Copy else">📋</button></div>
+                <div class="kw-card" data-keyword="enum"><span class="kw-name">enum</span><span class="kw-cat">User Type</span><span class="kw-desc">Defines a set of named integer constants.</span><button class="copy-mini" aria-label="Copy enum">📋</button></div>
+                <div class="kw-card" data-keyword="extern"><span class="kw-name">extern</span><span class="kw-cat">Storage</span><span class="kw-desc">Declares a variable defined elsewhere.</span><button class="copy-mini" aria-label="Copy extern">📋</button></div>
+                <div class="kw-card" data-keyword="float"><span class="kw-name">float</span><span class="kw-cat">Data Type</span><span class="kw-desc">Single-precision floating point.</span><button class="copy-mini" aria-label="Copy float">📋</button></div>
+                <div class="kw-card" data-keyword="for"><span class="kw-name">for</span><span class="kw-cat">Loop</span><span class="kw-desc">Counted loop (init; condition; update).</span><button class="copy-mini" aria-label="Copy for">📋</button></div>
+                <div class="kw-card" data-keyword="goto"><span class="kw-name">goto</span><span class="kw-cat">Jump</span><span class="kw-desc">Unconditional jump to a label.</span><button class="copy-mini" aria-label="Copy goto">📋</button></div>
+                <div class="kw-card" data-keyword="if"><span class="kw-name">if</span><span class="kw-cat">Decision</span><span class="kw-desc">Conditional execution.</span><button class="copy-mini" aria-label="Copy if">📋</button></div>
+                <div class="kw-card" data-keyword="int"><span class="kw-name">int</span><span class="kw-cat">Data Type</span><span class="kw-desc">Integer (typically 4 bytes).</span><button class="copy-mini" aria-label="Copy int">📋</button></div>
+                <div class="kw-card" data-keyword="long"><span class="kw-name">long</span><span class="kw-cat">Data Type</span><span class="kw-desc">Extended-size integer.</span><button class="copy-mini" aria-label="Copy long">📋</button></div>
+                <div class="kw-card" data-keyword="register"><span class="kw-name">register</span><span class="kw-cat">Storage</span><span class="kw-desc">Hint to store variable in CPU register.</span><button class="copy-mini" aria-label="Copy register">📋</button></div>
+                <div class="kw-card" data-keyword="return"><span class="kw-name">return</span><span class="kw-cat">Jump</span><span class="kw-desc">Returns a value from a function.</span><button class="copy-mini" aria-label="Copy return">📋</button></div>
+                <div class="kw-card" data-keyword="short"><span class="kw-name">short</span><span class="kw-cat">Data Type</span><span class="kw-desc">Smaller integer (usually 2 bytes).</span><button class="copy-mini" aria-label="Copy short">📋</button></div>
+                <div class="kw-card" data-keyword="signed"><span class="kw-name">signed</span><span class="kw-cat">Qualifier</span><span class="kw-desc">Allows negative values.</span><button class="copy-mini" aria-label="Copy signed">📋</button></div>
+                <div class="kw-card" data-keyword="sizeof"><span class="kw-name">sizeof</span><span class="kw-cat">Operator</span><span class="kw-desc">Returns size of a type/variable in bytes.</span><button class="copy-mini" aria-label="Copy sizeof">📋</button></div>
+                <div class="kw-card" data-keyword="static"><span class="kw-name">static</span><span class="kw-cat">Storage</span><span class="kw-desc">Preserves value between calls.</span><button class="copy-mini" aria-label="Copy static">📋</button></div>
+                <div class="kw-card" data-keyword="struct"><span class="kw-name">struct</span><span class="kw-cat">User Type</span><span class="kw-desc">Groups different data types together.</span><button class="copy-mini" aria-label="Copy struct">📋</button></div>
+                <div class="kw-card" data-keyword="switch"><span class="kw-name">switch</span><span class="kw-cat">Decision</span><span class="kw-desc">Multi-way branch statement.</span><button class="copy-mini" aria-label="Copy switch">📋</button></div>
+                <div class="kw-card" data-keyword="typedef"><span class="kw-name">typedef</span><span class="kw-cat">User Type</span><span class="kw-desc">Creates a new type alias.</span><button class="copy-mini" aria-label="Copy typedef">📋</button></div>
+                <div class="kw-card" data-keyword="union"><span class="kw-name">union</span><span class="kw-cat">User Type</span><span class="kw-desc">Same memory for different members.</span><button class="copy-mini" aria-label="Copy union">📋</button></div>
+                <div class="kw-card" data-keyword="unsigned"><span class="kw-name">unsigned</span><span class="kw-cat">Qualifier</span><span class="kw-desc">Only non-negative values.</span><button class="copy-mini" aria-label="Copy unsigned">📋</button></div>
+                <div class="kw-card" data-keyword="void"><span class="kw-name">void</span><span class="kw-cat">Data Type</span><span class="kw-desc">No value / no parameters.</span><button class="copy-mini" aria-label="Copy void">📋</button></div>
+                <div class="kw-card" data-keyword="volatile"><span class="kw-name">volatile</span><span class="kw-cat">Qualifier</span><span class="kw-desc">Prevents compiler optimization.</span><button class="copy-mini" aria-label="Copy volatile">📋</button></div>
+                <div class="kw-card" data-keyword="while"><span class="kw-name">while</span><span class="kw-cat">Loop</span><span class="kw-desc">Condition-controlled loop.</span><button class="copy-mini" aria-label="Copy while">📋</button></div>
+            </div>
+        </section>
+
+        <!-- SECTION 4 — DATA TYPES -->
+        <section class="cheat-section" id="data-types" data-title="Data Types">
+            <div class="cheat-header">
+                <span class="cheat-num">02</span>
+                <h2>Data Types</h2>
+                <span class="difficulty-tag difficulty-beginner">🟢 Beginner</span>
+            </div>
+            <p class="cheat-intro">Data types specify the type and size of data a variable can store. Size may vary by platform (values below are typical 64-bit GCC).</p>
+
+            <div class="table-wrap">
+                <table class="cheat-table">
+                    <thead><tr><th>Type</th><th>Description</th><th>Size</th><th>Range (typical)</th><th>Example</th></tr></thead>
+                    <tbody>
+                        <tr><td><code>char</code></td><td>Single character / small integer</td><td>1 byte</td><td>-128 to 127</td><td><code>char grade = 'A';</code></td></tr>
+                        <tr><td><code>int</code></td><td>Standard integer</td><td>4 bytes</td><td>-2,147,483,648 to 2,147,483,647</td><td><code>int age = 20;</code></td></tr>
+                        <tr><td><code>float</code></td><td>Single-precision decimal</td><td>4 bytes</td><td>~6-7 decimal digits</td><td><code>float pi = 3.14f;</code></td></tr>
+                        <tr><td><code>double</code></td><td>Double-precision decimal</td><td>8 bytes</td><td>~15-16 decimal digits</td><td><code>double pi = 3.14159;</code></td></tr>
+                        <tr><td><code>void</code></td><td>No type / empty</td><td>—</td><td>—</td><td><code>void func();</code></td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 class="sub-head">Size Program</h3>
+            <div class="code-block-wrap">
+                <button class="copy-btn" aria-label="Copy code">📋 Copy</button>
+<pre><code>#include &lt;stdio.h&gt;
+int main() {
+    printf("char   = %lu byte(s)\n",  sizeof(char));
+    printf("int    = %lu byte(s)\n",  sizeof(int));
+    printf("float  = %lu byte(s)\n",  sizeof(float));
+    printf("double = %lu byte(s)\n",  sizeof(double));
+    return 0;
+}</code></pre>
+            </div>
+        </section>
+
+        <!-- SECTION 5 — FORMAT SPECIFIERS -->
+        <section class="cheat-section" id="format-specifiers" data-title="Format Specifiers">
+            <div class="cheat-header">
+                <span class="cheat-num">03</span>
+                <h2>Format Specifiers</h2>
+                <span class="difficulty-tag difficulty-beginner">🟢 Beginner</span>
+            </div>
+            <p class="cheat-intro">Used inside <code>printf()</code> and <code>scanf()</code> to format output and read input.</p>
+
+            <div class="table-wrap">
+                <table class="cheat-table">
+                    <thead><tr><th>Specifier</th><th>Data Type</th><th>Example</th></tr></thead>
+                    <tbody>
+                        <tr><td><code>%d</code></td><td>Signed integer</td><td><code>printf("%d", 42);</code></td></tr>
+                        <tr><td><code>%f</code></td><td>Float / double</td><td><code>printf("%f", 3.14);</code></td></tr>
+                        <tr><td><code>%c</code></td><td>Single character</td><td><code>printf("%c", 'A');</code></td></tr>
+                        <tr><td><code>%s</code></td><td>String</td><td><code>printf("%s", "Hello");</code></td></tr>
+                        <tr><td><code>%lf</code></td><td>Double (in scanf)</td><td><code>scanf("%lf", &amp;x);</code></td></tr>
+                        <tr><td><code>%u</code></td><td>Unsigned integer</td><td><code>printf("%u", 100);</code></td></tr>
+                        <tr><td><code>%x</code></td><td>Hexadecimal</td><td><code>printf("%x", 255);</code> → <code>ff</code></td></tr>
+                        <tr><td><code>%o</code></td><td>Octal</td><td><code>printf("%o", 8);</code> → <code>10</code></td></tr>
+                        <tr><td><code>%ld</code></td><td>Long integer</td><td><code>printf("%ld", 100000L);</code></td></tr>
+                        <tr><td><code>%p</code></td><td>Pointer address</td><td><code>printf("%p", ptr);</code></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- SECTION 6 — ESCAPE SEQUENCES -->
+        <section class="cheat-section" id="escape-sequences" data-title="Escape Sequences">
+            <div class="cheat-header">
+                <span class="cheat-num">04</span>
+                <h2>Escape Sequences</h2>
+                <span class="difficulty-tag difficulty-beginner">🟢 Beginner</span>
+            </div>
+
+            <div class="table-wrap">
+                <table class="cheat-table">
+                    <thead><tr><th>Sequence</th><th>Meaning</th><th>Example</th><th>Output</th></tr></thead>
+                    <tbody>
+                        <tr><td><code>\n</code></td><td>Newline</td><td><code>"Hello\nWorld"</code></td><td>Hello (new line) World</td></tr>
+                        <tr><td><code>\t</code></td><td>Horizontal tab</td><td><code>"A\tB"</code></td><td>A____B (gap)</td></tr>
+                        <tr><td><code>\\</code></td><td>Backslash</td><td><code>"C:\\path"</code></td><td>C:\path</td></tr>
+                        <tr><td><code>\"</code></td><td>Double quote</td><td><code>"He said \"Hi\""</code></td><td>He said "Hi"</td></tr>
+                        <tr><td><code>\'</code></td><td>Single quote</td><td><code>"\'A\'"</code></td><td>'A'</td></tr>
+                        <tr><td><code>\b</code></td><td>Backspace</td><td><code>"AB\bC"</code></td><td>AC</td></tr>
+                        <tr><td><code>\r</code></td><td>Carriage return</td><td><code>"AB\rCD"</code></td><td>CD</td></tr>
+                        <tr><td><code>\a</code></td><td>Alert (bell)</td><td><code>"\a"</code></td><td>System beep</td></tr>
+                        <tr><td><code>\0</code></td><td>Null character</td><td>string terminator</td><td>—</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- SECTION 7 — OPERATORS -->
+        <section class="cheat-section" id="operators" data-title="Operators">
+            <div class="cheat-header">
+                <span class="cheat-num">05</span>
+                <h2>Operators</h2>
+                <span class="difficulty-tag difficulty-beginner">🟢 Beginner</span>
+            </div>
+
+            <h3 class="sub-head">Arithmetic Operators</h3>
+            <div class="table-wrap">
+                <table class="cheat-table">
+                    <thead><tr><th>Operator</th><th>Purpose</th><th>Example</th><th>Result</th></tr></thead>
+                    <tbody>
+                        <tr><td><code>+</code></td><td>Addition</td><td><code>5 + 3</code></td><td><code>8</code></td></tr>
+                        <tr><td><code>-</code></td><td>Subtraction</td><td><code>5 - 3</code></td><td><code>2</code></td></tr>
+                        <tr><td><code>*</code></td><td>Multiplication</td><td><code>5 * 3</code></td><td><code>15</code></td></tr>
+                        <tr><td><code>/</code></td><td>Division</td><td><code>5 / 2</code></td><td><code>2</code> (integer)</td></tr>
+                        <tr><td><code>%</code></td><td>Modulus (remainder)</td><td><code>5 % 2</code></td><td><code>1</code></td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 class="sub-head">Relational Operators</h3>
+            <div class="table-wrap">
+                <table class="cheat-table">
+                    <thead><tr><th>Operator</th><th>Purpose</th><th>Example</th><th>Result</th></tr></thead>
+                    <tbody>
+                        <tr><td><code>==</code></td><td>Equal to</td><td><code>5 == 5</code></td><td><code>1</code> (true)</td></tr>
+                        <tr><td><code>!=</code></td><td>Not equal to</td><td><code>5 != 3</code></td><td><code>1</code> (true)</td></tr>
+                        <tr><td><code>&gt;</code></td><td>Greater than</td><td><code>5 &gt; 3</code></td><td><code>1</code></td></tr>
+                        <tr><td><code>&lt;</code></td><td>Less than</td><td><code>5 &lt; 3</code></td><td><code>0</code></td></tr>
+                        <tr><td><code>&gt;=</code></td><td>Greater or equal</td><td><code>5 &gt;= 5</code></td><td><code>1</code></td></tr>
+                        <tr><td><code>&lt;=</code></td><td>Less or equal</td><td><code>5 &lt;= 3</code></td><td><code>0</code></td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 class="sub-head">Logical Operators</h3>
+            <div class="table-wrap">
+                <table class="cheat-table">
+                    <thead><tr><th>Operator</th><th>Purpose</th><th>Example</th><th>Result</th></tr></thead>
+                    <tbody>
+                        <tr><td><code>&amp;&amp;</code></td><td>Logical AND</td><td><code>(5&gt;3) &amp;&amp; (2&lt;4)</code></td><td><code>1</code></td></tr>
+                        <tr><td><code>||</code></td><td>Logical OR</td><td><code>(5&lt;3) || (2&lt;4)</code></td><td><code>1</code></td></tr>
+                        <tr><td><code>!</code></td><td>Logical NOT</td><td><code>!(5==3)</code></td><td><code>1</code></td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 class="sub-head">Assignment Operators</h3>
+            <div class="table-wrap">
+                <table class="cheat-table">
+                    <thead><tr><th>Operator</th><th>Example</th><th>Equivalent</th></tr></thead>
+                    <tbody>
+                        <tr><td><code>=</code></td><td><code>a = 5</code></td><td>Assigns 5</td></tr>
+                        <tr><td><code>+=</code></td><td><code>a += 3</code></td><td><code>a = a + 3</code></td></tr>
+                        <tr><td><code>-=</code></td><td><code>a -= 3</code></td><td><code>a = a - 3</code></td></tr>
+                        <tr><td><code>*=</code></td><td><code>a *= 3</code></td><td><code>a = a * 3</code></td></tr>
+                        <tr><td><code>/=</code></td><td><code>a /= 3</code></td><td><code>a = a / 3</code></td></tr>
+                        <tr><td><code>%=</code></td><td><code>a %= 3</code></td><td><code>a = a % 3</code></td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 class="sub-head">Bitwise Operators <span class="difficulty-tag difficulty-intermediate">🟡 Intermediate</span></h3>
+            <div class="table-wrap">
+                <table class="cheat-table">
+                    <thead><tr><th>Operator</th><th>Purpose</th><th>Example (a=5, b=3)</th><th>Result</th></tr></thead>
+                    <tbody>
+                        <tr><td><code>&amp;</code></td><td>Bitwise AND</td><td><code>5 &amp; 3</code></td><td><code>1</code> (0101 &amp; 0011)</td></tr>
+                        <tr><td><code>|</code></td><td>Bitwise OR</td><td><code>5 | 3</code></td><td><code>7</code> (0101 | 0011)</td></tr>
+                        <tr><td><code>^</code></td><td>Bitwise XOR</td><td><code>5 ^ 3</code></td><td><code>6</code></td></tr>
+                        <tr><td><code>~</code></td><td>Bitwise NOT</td><td><code>~5</code></td><td><code>-6</code></td></tr>
+                        <tr><td><code>&lt;&lt;</code></td><td>Left shift</td><td><code>5 &lt;&lt; 1</code></td><td><code>10</code></td></tr>
+                        <tr><td><code>&gt;&gt;</code></td><td>Right shift</td><td><code>5 &gt;&gt; 1</code></td><td><code>2</code></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- SECTION 8 — INPUT / OUTPUT -->
+        <section class="cheat-section" id="io" data-title="Input Output">
+            <div class="cheat-header">
+                <span class="cheat-num">06</span>
+                <h2>Input / Output Functions</h2>
+                <span class="difficulty-tag difficulty-beginner">🟢 Beginner</span>
+            </div>
+
+            <div class="func-grid">
+                <div class="func-card">
+                    <h4><code>printf()</code></h4>
+                    <p><strong>Purpose:</strong> Prints formatted output to screen.</p>
+                    <div class="code-block-wrap small">
+                        <button class="copy-btn" aria-label="Copy code">📋 Copy</button>
+<pre><code>printf("Hello %s, age %d\n", name, age);</code></pre>
+                    </div>
+                    <p class="mistake-line">❌ Forgetting <code>\n</code> when a newline is needed.</p>
+                </div>
+
+                <div class="func-card">
+                    <h4><code>scanf()</code></h4>
+                    <p><strong>Purpose:</strong> Reads formatted input from keyboard.</p>
+                    <div class="code-block-wrap small">
+                        <button class="copy-btn" aria-label="Copy code">📋 Copy</button>
+<pre><code>int age;
+scanf("%d", &amp;age);   // &amp; is mandatory!</code></pre>
+                    </div>
+                    <p class="mistake-line">❌ Missing <code>&amp;</code> before variables.</p>
+                </div>
+
+                <div class="func-card">
+                    <h4><code>getchar()</code></h4>
+                    <p><strong>Purpose:</strong> Reads a single character from stdin.</p>
+                    <div class="code-block-wrap small">
+                        <button class="copy-btn" aria-label="Copy code">📋 Copy</button>
+<pre><code>char ch = getchar();</code></pre>
+                    </div>
+                </div>
+
+                <div class="func-card">
+                    <h4><code>putchar()</code></h4>
+                    <p><strong>Purpose:</strong> Prints a single character to screen.</p>
+                    <div class="code-block-wrap small">
+                        <button class="copy-btn" aria-label="Copy code">📋 Copy</button>
+<pre><code>putchar('A');</code></pre>
+                    </div>
+                </div>
+
+                <div class="func-card">
+                    <h4><code>gets()</code> <span class="warn">⚠ deprecated</span></h4>
+                    <p><strong>Purpose:</strong> Reads a line (unsafe — removed in C11).</p>
+                    <div class="code-block-wrap small">
+                        <button class="copy-btn" aria-label="Copy code">📋 Copy</button>
+<pre><code>char s[100];
+gets(s);   // avoid</code></pre>
+                    </div>
+                </div>
+
+                <div class="func-card">
+                    <h4><code>puts()</code></h4>
+                    <p><strong>Purpose:</strong> Prints a string + newline.</p>
+                    <div class="code-block-wrap small">
+                        <button class="copy-btn" aria-label="Copy code">📋 Copy</button>
+<pre><code>puts("Hello World");</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 9 — DECISION MAKING -->
+        <section class="cheat-section" id="decision" data-title="Decision Making">
+            <div class="cheat-header">
+                <span class="cheat-num">07</span>
+                <h2>Decision Making</h2>
+                <span class="difficulty-tag difficulty-beginner">🟢 Beginner</span>
+            </div>
+
+            <h3 class="sub-head">if Statement</h3>
+            <div class="code-block-wrap">
+                <button class="copy-btn" aria-label="Copy code">📋 Copy</button>
+<pre><code>if (age &gt;= 18) {
+    printf("Eligible to vote");
+}</code></pre>
+            </div>
+
+            <h3 class="sub-head">if-else</h3>
+            <div class="code-block-wrap">
+                <button class="copy-btn" aria-label="Copy code">📋 Copy</button>
+<pre><code>if (marks &gt;= 40)
+    printf("Pass");
+else
+    printf("Fail");</code></pre>
+            </div>
+
+            <h3 class="sub-head">Nested if</h3>
+            <div class="code-block-wrap">
+                <button class="copy-btn" aria-label="Copy code">📋 Copy</button>
+<pre><code>if (marks &gt;= 90)       grade = 'A';
+else if (marks &gt;= 75)  grade = 'B';
+else if (marks &gt;= 60)  grade = 'C';
+else                   grade = 'D';</code></pre>
+            </div>
+
+            <h3 class="sub-head">switch</h3>
+            <div class="code-block-wrap">
+                <button class="copy-btn" aria-label="Copy code">📋 Copy</button>
+<pre><code>switch (choice) {
+    case 1: printf("Add"); break;
+    case 2: printf("Sub"); break;
+    default: printf("Invalid");
+}</code></pre>
+            </div>
+
+            <div class="callout">
+                <strong>Use cases:</strong> <code>if</code> for ranges, <code>switch</code> for fixed discrete values. Always include <code>break</code> in switch to prevent fall-through.
+            </div>
+        </section>
+
+        <!-- SECTION 10 — LOOPS -->
+        <section class="cheat-section" id="loops" data-title="Loops">
+            <div class="cheat-header">
+                <span class="cheat-num">08</span>
+                <h2>Loops</h2>
+                <span class="difficulty-tag difficulty-beginner">🟢 Beginner</span>
+            </div>
+
+            <h3 class="sub-head">for Loop</h3>
+            <div class="code-block-wrap">
+                <button class="copy-btn" aria-label="Copy code">📋 Copy</button>
+<pre><code>for (int i = 0; i &lt; 5; i++) {
+    printf("%d ", i);
+}</code></pre>
+            </div>
+
+            <h3 class="sub-head">while Loop</h3>
+            <div class="code-block-wrap">
+                <button class="copy-btn" aria-label="Copy code">📋 Copy</button>
+<pre><code>int i = 0;
+while (i &lt; 5) {
+    printf("%d ", i);
+    i++;
+}</code></pre>
+            </div>
+
+            <h3 class="sub-head">do-while Loop</h3>
+            <div class="code-block-wrap">
+                <button class="copy-btn" aria-label="Copy code">📋 Copy</button>
+<pre><code>int i = 0;
+do {
+    printf("%d ", i);
+    i++;
+} while (i &lt; 5);   // runs at least once</code></pre>
+            </div>
+
+            <h3 class="sub-head">break &amp; continue</h3>
+            <div class="code-block-wrap">
+                <button class="copy-btn" aria-label="Copy code">📋 Copy</button>
+<pre><code>for (int i = 0; i &lt; 10; i++) {
+    if (i == 5)  break;     // exit loop
+    if (i % 2)   continue;  // skip odd
+    printf("%d ", i);
+}</code></pre>
+            </div>
+
+            <h3 class="sub-head">Comparison</h3>
+            <div class="table-wrap">
+                <table class="cheat-table">
+                    <thead><tr><th>Loop</th><th>Entry condition</th><th>Minimum runs</th><th>Best for</th></tr></thead>
+                    <tbody>
+                        <tr><td><code>for</code></td><td>Checked first</td><td>0</td><td>Counted loops</td></tr>
+                        <tr><td><code>while</code></td><td>Checked first</td><td>0</td><td>Condition-based</td></tr>
+                        <tr><td><code>do-while</code></td><td>Checked last</td><td>1</td><td>Menu-driven / repeat at least once</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- SECTION 11 — ARRAYS -->
+        <section class="cheat-section" id="arrays" data-title="Arrays">
+            <div class="cheat-header">
+                <span class="cheat-num">09</span>
+                <h2>Arrays</h2>
+                <span class="difficulty-tag difficulty-beginner">🟢 Beginner</span>
+            </div>
+
+            <h3 class="sub-head">1D Array</h3>
+            <div class="code-block-wrap">
+                <button class="copy-btn" aria-label="Copy code">📋 Copy</button>
+<pre><code>int marks[5] = {90, 85, 78, 92, 88};
+
+for (int i = 0; i &lt; 5; i++)
+    printf("%d ", marks[i]);</code></pre>
+            </div>
+
+            <h3 class="sub-head">2D Array</h3>
+            <div class="code-block-wrap">
+                <button class="copy-btn" aria-label="Copy code">📋 Copy</button>
+<pre><code>int mat[2][3] = {
+    {1, 2, 3},
+    {4, 5, 6}
+};
+
+printf("%d", mat[1][2]);   // 6</code></pre>
+            </div>
+
+            <h3 class="sub-head">Visualization</h3>
+            <div class="array-viz">
+                <div class="viz-cell"><span class="idx">[0]</span>90</div>
+                <div class="viz-cell"><span class="idx">[1]</span>85</div>
+                <div class="viz-cell"><span class="idx">[2]</span>78</div>
+                <div class="viz-cell"><span class="idx">[3]</span>92</div>
+                <div class="viz-cell"><span class="idx">[4]</span>88</div>
+            </div>
+            <p class="cheat-intro" style="margin-top:0.75rem"><code>marks</code> is base address → <code>marks[0]</code> at <code>marks + 0</code>.</p>
+        </section>
+
+        <!-- SECTION 12 — STRINGS -->
+        <section class="cheat-section" id="strings" data-title="Strings">
+            <div class="cheat-header">
+                <span class="cheat-num">10</span>
+                <h2>String Functions <span class="small-tag">string.h</span></h2>
+                <span class="difficulty-tag difficulty-beginner">🟢 Beginner</span>
+            </div>
+
+            <div class="table-wrap">
+                <table class="cheat-table">
+                    <thead><tr><th>Function</th><th>Purpose</th><th>Example</th></tr></thead>
+                    <tbody>
+                        <tr><td><code>strlen(s)</code></td><td>Length (excluding <code>\0</code>)</td><td><code>strlen("Hi")</code> → <code>2</code></td></tr>
+                        <tr><td><code>strcpy(d, s)</code></td><td>Copy s into d</td><td><code>strcpy(a, "Hi");</code></td></tr>
+                        <tr><td><code>strcat(d, s)</code></td><td>Append s to d</td><td><code>strcat(a, " World");</code></td></tr>
+                        <tr><td><code>strcmp(a, b)</code></td><td>Compare: 0 if equal</td><td><code>strcmp("a","b")</code> → negative</td></tr>
+                        <tr><td><code>strchr(s, c)</code></td><td>Locate char in string</td><td>—</td></tr>
+                        <tr><td><code>strstr(s, sub)</code></td><td>Locate substring</td><td>—</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 class="sub-head">String Example</h3>
+            <div class="code-block-wrap">
+                <button class="copy-btn" aria-label="Copy code">📋 Copy</button>
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+int main() {
+    char a[20] = "Hello";
+    char b[20] = "World";
+    strcat(a, " ");
+    strcat(a, b);
+    printf("%s (len=%lu)", a, strlen(a));
+    return 0;
+}</code></pre>
+            </div>
+        </section>
+
+        <!-- SECTION 13 — FUNCTIONS -->
+        <section class="cheat-section" id="functions" data-title="Functions">
+            <div class="cheat-header">
+                <span class="cheat-num">11</span>
+                <h2>Functions</h2>
+                <span class="difficulty-tag difficulty-intermediate">🟡 Intermediate</span>
+            </div>
+
+            <h3 class="sub-head">Declaration / Definition / Call</h3>
+            <div class="code-block-wrap">
+                <button class="copy-btn" aria-label="Copy code">📋 Copy</button>
+<pre><code>#include &lt;stdio.h&gt;
+
+// 1. Declaration (prototype)
+int add(int a, int b);
+
+int main() {
+    int result = add(5, 3);   // 3. Call
+    printf("%d", result);     // 8
+    return 0;
+}
+
+// 2. Definition
+int add(int a, int b) {
+    return a + b;
+}</code></pre>
+            </div>
+
+            <h3 class="sub-head">Recursion</h3>
+            <div class="code-block-wrap">
+                <button class="copy-btn" aria-label="Copy code">📋 Copy</button>
+<pre><code>int factorial(int n) {
+    if (n == 0) return 1;          // base case
+    return n * factorial(n - 1);   // recursive call
+}</code></pre>
+            </div>
+
+            <div class="callout">
+                <strong>Tip:</strong> Always provide a base case in recursion to avoid stack overflow.
+            </div>
+        </section>
+
+        <!-- SECTION 14 — POINTERS -->
+        <section class="cheat-section" id="pointers" data-title="Pointers">
+            <div class="cheat-header">
+                <span class="cheat-num">12</span>
+                <h2>Pointers</h2>
+                <span class="difficulty-tag difficulty-advanced">🔴 Advanced</span>
+            </div>
+
+            <h3 class="sub-head">Declaration &amp; Dereference</h3>
+            <div class="code-block-wrap">
+                <button class="copy-btn" aria-label="Copy code">📋 Copy</button>
+<pre><code>int x = 10;
+int *p = &amp;x;      // p holds address of x
+
+printf("%d",  x);   // value: 10
+printf("%p",  p);   // address
+printf("%d", *p);   // dereference: 10</code></pre>
+            </div>
+
+            <h3 class="sub-head">Pointer Arithmetic</h3>
+            <div class="code-block-wrap">
+                <button class="copy-btn" aria-label="Copy code">📋 Copy</button>
+<pre><code>int arr[3] = {10, 20, 30};
+int *p = arr;
+printf("%d", *p);       // 10
+printf("%d", *(p+1));   // 20
+printf("%d", *(p+2));   // 30</code></pre>
+            </div>
+
+            <h3 class="sub-head">Call by Reference</h3>
+            <div class="code-block-wrap">
+                <button class="copy-btn" aria-label="Copy code">📋 Copy</button>
+<pre><code>void swap(int *a, int *b) {
+    int t = *a; *a = *b; *b = t;
+}
+
+int main() {
+    int x = 5, y = 10;
+    swap(&amp;x, &amp;y);   // x=10, y=5
+    return 0;
+}</code></pre>
+            </div>
+        </section>
+
+        <!-- SECTION 15 — STRUCTURES -->
+        <section class="cheat-section" id="struct" data-title="Structures">
+            <div class="cheat-header">
+                <span class="cheat-num">13</span>
+                <h2>Structures</h2>
+                <span class="difficulty-tag difficulty-intermediate">🟡 Intermediate</span>
+            </div>
+
+            <h3 class="sub-head">Declaration &amp; Access</h3>
+            <div class="code-block-wrap">
+                <button class="copy-btn" aria-label="Copy code">📋 Copy</button>
+<pre><code>struct Student {
+    char name[30];
+    int roll;
+    float marks;
+};
+
+int main() {
+    struct Student s1 = {"Shyam", 42, 88.5};
+    printf("%s %d %.1f", s1.name, s1.roll, s1.marks);
+
+    struct Student *p = &amp;s1;
+    printf("%s", p-&gt;name);   // arrow operator
+    return 0;
+}</code></pre>
+            </div>
+
+            <h3 class="sub-head">Array of Structures</h3>
+            <div class="code-block-wrap">
+                <button class="copy-btn" aria-label="Copy code">📋 Copy</button>
+<pre><code>struct Student class[3] = {
+    {"A", 1, 80},
+    {"B", 2, 75},
+    {"C", 3, 90}
+};
+
+for (int i = 0; i &lt; 3; i++)
+    printf("%s -> %.1f\n", class[i].name, class[i].marks);</code></pre>
+            </div>
+
+            <h3 class="sub-head">Nested Structure</h3>
+            <div class="code-block-wrap">
+                <button class="copy-btn" aria-label="Copy code">📋 Copy</button>
+<pre><code>struct Date {
+    int day, month, year;
+};
+
+struct Person {
+    char name[30];
+    struct Date dob;
+};</code></pre>
+            </div>
+        </section>
+
+        <!-- SECTION 16 — UNIONS -->
+        <section class="cheat-section" id="union" data-title="Unions">
+            <div class="cheat-header">
+                <span class="cheat-num">14</span>
+                <h2>Unions</h2>
+                <span class="difficulty-tag difficulty-intermediate">🟡 Intermediate</span>
+            </div>
+            <p class="cheat-intro">Like <code>struct</code>, but <strong>all members share the same memory</strong>. Size = size of largest member.</p>
+
+            <div class="code-block-wrap">
+                <button class="copy-btn" aria-label="Copy code">📋 Copy</button>
+<pre><code>#include &lt;stdio.h&gt;
+union Data {
+    int   i;
+    float f;
+    char  str[20];
+};
+
+int main() {
+    union Data d;
+    d.i = 10;
+    printf("%d\n", d.i);
+    d.f = 3.14;       // overwrites i
+    printf("%.2f\n", d.f);
+    return 0;
+}</code></pre>
+            </div>
+        </section>
+
+        <!-- SECTION 17 — FILE HANDLING -->
+        <section class="cheat-section" id="files" data-title="File Handling">
+            <div class="cheat-header">
+                <span class="cheat-num">15</span>
+                <h2>File Handling</h2>
+                <span class="difficulty-tag difficulty-intermediate">🟡 Intermediate</span>
+            </div>
+
+            <div class="table-wrap">
+                <table class="cheat-table">
+                    <thead><tr><th>Function</th><th>Purpose</th></tr></thead>
+                    <tbody>
+                        <tr><td><code>fopen(name, mode)</code></td><td>Open a file</td></tr>
+                        <tr><td><code>fclose(fp)</code></td><td>Close a file</td></tr>
+                        <tr><td><code>fprintf(fp, ...)</code></td><td>Write formatted data</td></tr>
+                        <tr><td><code>fscanf(fp, ...)</code></td><td>Read formatted data</td></tr>
+                        <tr><td><code>fgets(buf, n, fp)</code></td><td>Read a line</td></tr>
+                        <tr><td><code>fputs(s, fp)</code></td><td>Write a string</td></tr>
+                        <tr><td><code>fread/fwrite</code></td><td>Binary I/O</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 class="sub-head">Modes: <code>r w a r+ w+ a+ rb wb</code></h3>
+
+            <div class="code-block-wrap">
+                <button class="copy-btn" aria-label="Copy code">📋 Copy</button>
+<pre><code>#include &lt;stdio.h&gt;
+int main() {
+    FILE *fp = fopen("data.txt", "w");
+    if (fp == NULL) return 1;
+
+    fprintf(fp, "Hello File!\n");
+    fputs("Second line\n", fp);
+    fclose(fp);
+
+    fp = fopen("data.txt", "r");
+    char line[100];
+    while (fgets(line, sizeof(line), fp))
+        printf("%s", line);
+    fclose(fp);
+    return 0;
+}</code></pre>
+            </div>
+        </section>
+
+        <!-- SECTION 18 — DYNAMIC MEMORY -->
+        <section class="cheat-section" id="memory" data-title="Dynamic Memory">
+            <div class="cheat-header">
+                <span class="cheat-num">16</span>
+                <h2>Dynamic Memory Allocation</h2>
+                <span class="difficulty-tag difficulty-advanced">🔴 Advanced</span>
+            </div>
+
+            <div class="table-wrap">
+                <table class="cheat-table">
+                    <thead><tr><th>Function</th><th>Purpose</th></tr></thead>
+                    <tbody>
+                        <tr><td><code>malloc(size)</code></td><td>Allocates uninitialized memory</td></tr>
+                        <tr><td><code>calloc(n, size)</code></td><td>Allocates zero-initialized memory</td></tr>
+                        <tr><td><code>realloc(ptr, size)</code></td><td>Resizes a previous allocation</td></tr>
+                        <tr><td><code>free(ptr)</code></td><td>Releases memory</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="code-block-wrap">
+                <button class="copy-btn" aria-label="Copy code">📋 Copy</button>
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+int main() {
+    int *p = (int *)malloc(5 * sizeof(int));
+    if (p == NULL) return 1;
+
+    for (int i = 0; i &lt; 5; i++) p[i] = i + 1;
+
+    p = (int *)realloc(p, 10 * sizeof(int));
+
+    free(p);   // ALWAYS free!
+    return 0;
+}</code></pre>
+            </div>
+
+            <div class="callout warn-callout">
+                <strong>⚠ Common Errors:</strong>
+                <ul>
+                    <li>Forgetting to <code>free()</code> → memory leak.</li>
+                    <li>Using memory after <code>free()</code> → dangling pointer.</li>
+                    <li>Not checking for <code>NULL</code> after allocation.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- SECTION 19 — HEADER FILES -->
+        <section class="cheat-section" id="headers" data-title="Header Files">
+            <div class="cheat-header">
+                <span class="cheat-num">17</span>
+                <h2>Common Header Files</h2>
+                <span class="difficulty-tag difficulty-beginner">🟢 Beginner</span>
+            </div>
+
+            <div class="table-wrap">
+                <table class="cheat-table">
+                    <thead><tr><th>Header</th><th>Purpose</th><th>Common Functions</th></tr></thead>
+                    <tbody>
+                        <tr><td><code>stdio.h</code></td><td>Standard I/O</td><td><code>printf, scanf, fopen, fclose, fprintf, fscanf, getchar, putchar</code></td></tr>
+                        <tr><td><code>stdlib.h</code></td><td>Standard library</td><td><code>malloc, calloc, realloc, free, atoi, exit, rand</code></td></tr>
+                        <tr><td><code>string.h</code></td><td>String handling</td><td><code>strlen, strcpy, strcat, strcmp, strchr, strstr</code></td></tr>
+                        <tr><td><code>math.h</code></td><td>Math functions</td><td><code>sqrt, pow, sin, cos, tan, log, fabs</code></td></tr>
+                        <tr><td><code>ctype.h</code></td><td>Character tests</td><td><code>isalpha, isdigit, isspace, toupper, tolower</code></td></tr>
+                        <tr><td><code>time.h</code></td><td>Date &amp; time</td><td><code>time, clock, difftime, strftime</code></td></tr>
+                        <tr><td><code>conio.h</code></td><td>Console I/O (non-standard)</td><td><code>getch, clrscr</code></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- SECTION 20 — COMMON ERRORS -->
+        <section class="cheat-section" id="errors" data-title="Common Errors">
+            <div class="cheat-header">
+                <span class="cheat-num">18</span>
+                <h2>Common Errors &amp; Fixes</h2>
+                <span class="difficulty-tag difficulty-beginner">🟢 Beginner</span>
+            </div>
+
+            <div class="error-list">
+
+                <div class="error-item">
+                    <div class="err-head">❌ Missing Semicolon</div>
+                    <p><strong>Cause:</strong> Every C statement must end with <code>;</code></p>
+                    <div class="code-block-wrap small"><button class="copy-btn">📋 Copy</button><pre><code>printf("Hi")    // ❌
+printf("Hi");   // ✅</code></pre></div>
+                </div>
+
+                <div class="error-item">
+                    <div class="err-head">❌ Infinite Loop</div>
+                    <p><strong>Cause:</strong> Loop condition never becomes false.</p>
+                    <div class="code-block-wrap small"><button class="copy-btn">📋 Copy</button><pre><code>int i = 0;
+while (i &lt; 5) {       // missing i++
+    printf("%d", i);
+}</code></pre></div>
+                </div>
+
+                <div class="error-item">
+                    <div class="err-head">❌ Wrong Format Specifier</div>
+                    <p><strong>Cause:</strong> Mismatch between type and format.</p>
+                    <div class="code-block-wrap small"><button class="copy-btn">📋 Copy</button><pre><code>float x = 3.14;
+printf("%d", x);   // ❌ garbage
+printf("%f", x);   // ✅</code></pre></div>
+                </div>
+
+                <div class="error-item">
+                    <div class="err-head">❌ Array Out Of Bounds</div>
+                    <p><strong>Cause:</strong> Accessing index outside declared range.</p>
+                    <div class="code-block-wrap small"><button class="copy-btn">📋 Copy</button><pre><code>int a[5];
+a[5] = 10;   // ❌ valid indices: 0-4</code></pre></div>
+                </div>
+
+                <div class="error-item">
+                    <div class="err-head">❌ Uninitialized Variable</div>
+                    <p><strong>Cause:</strong> Reading a variable before assigning.</p>
+                    <div class="code-block-wrap small"><button class="copy-btn">📋 Copy</button><pre><code>int x;
+printf("%d", x);   // ❌ undefined
+int x = 0; printf("%d", x);   // ✅</code></pre></div>
+                </div>
+
+                <div class="error-item">
+                    <div class="err-head">❌ Null Pointer Access</div>
+                    <p><strong>Cause:</strong> Dereferencing a NULL pointer.</p>
+                    <div class="code-block-wrap small"><button class="copy-btn">📋 Copy</button><pre><code>int *p = NULL;
+*p = 5;          // ❌ crash
+if (p) *p = 5;   // ✅</code></pre></div>
+                </div>
+
+                <div class="error-item">
+                    <div class="err-head">❌ Missing Header File</div>
+                    <p><strong>Cause:</strong> Using a function without including its header.</p>
+                    <div class="code-block-wrap small"><button class="copy-btn">📋 Copy</button><pre><code>printf("Hi");   // ❌ if no #include &lt;stdio.h&gt;
+#include &lt;stdio.h&gt;   // ✅</code></pre></div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION 21 — QUICK REVISION TABLES -->
+        <section class="cheat-section" id="revision" data-title="Quick Revision">
+            <div class="cheat-header">
+                <span class="cheat-num">19</span>
+                <h2>Quick Revision Tables</h2>
+                <span class="difficulty-tag difficulty-beginner">🟢 Beginner</span>
+            </div>
+
+            <h3 class="sub-head">A. Operator Precedence (high → low)</h3>
+            <div class="table-wrap">
+                <table class="cheat-table">
+                    <thead><tr><th>Precedence</th><th>Operators</th></tr></thead>
+                    <tbody>
+                        <tr><td>1</td><td><code>() [] -&gt; .</code></td></tr>
+                        <tr><td>2</td><td><code>! ~ ++ -- + - * &amp; (type) sizeof</code></td></tr>
+                        <tr><td>3</td><td><code>* / %</code></td></tr>
+                        <tr><td>4</td><td><code>+ -</code></td></tr>
+                        <tr><td>5</td><td><code>&lt;&lt; &gt;&gt;</code></td></tr>
+                        <tr><td>6</td><td><code>&lt; &lt;= &gt; &gt;=</code></td></tr>
+                        <tr><td>7</td><td><code>== !=</code></td></tr>
+                        <tr><td>8</td><td><code>&amp;</code></td></tr>
+                        <tr><td>9</td><td><code>^</code></td></tr>
+                        <tr><td>10</td><td><code>|</code></td></tr>
+                        <tr><td>11</td><td><code>&amp;&amp;</code></td></tr>
+                        <tr><td>12</td><td><code>||</code></td></tr>
+                        <tr><td>13</td><td><code>?:</code></td></tr>
+                        <tr><td>14</td><td><code>= += -= *= /= %=</code></td></tr>
+                        <tr><td>15</td><td><code>,</code></td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 class="sub-head">B. All 32 C Keywords (one-line)</h3>
+            <p class="kw-cloud">
+                <code>auto</code> <code>break</code> <code>case</code> <code>char</code> <code>const</code> <code>continue</code> <code>default</code> <code>do</code> <code>double</code> <code>else</code> <code>enum</code> <code>extern</code> <code>float</code> <code>for</code> <code>goto</code> <code>if</code> <code>int</code> <code>long</code> <code>register</code> <code>return</code> <code>short</code> <code>signed</code> <code>sizeof</code> <code>static</code> <code>struct</code> <code>switch</code> <code>typedef</code> <code>union</code> <code>unsigned</code> <code>void</code> <code>volatile</code> <code>while</code>
+            </p>
+
+            <h3 class="sub-head">C. Format Specifier Cheat Sheet</h3>
+            <div class="table-wrap">
+                <table class="cheat-table">
+                    <thead><tr><th>Type</th><th>Specifier</th></tr></thead>
+                    <tbody>
+                        <tr><td>int</td><td><code>%d</code></td></tr>
+                        <tr><td>float</td><td><code>%f</code></td></tr>
+                        <tr><td>double</td><td><code>%lf</code></td></tr>
+                        <tr><td>char</td><td><code>%c</code></td></tr>
+                        <tr><td>string</td><td><code>%s</code></td></tr>
+                        <tr><td>unsigned</td><td><code>%u</code></td></tr>
+                        <tr><td>hex</td><td><code>%x</code></td></tr>
+                        <tr><td>octal</td><td><code>%o</code></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- NO RESULTS -->
+    <div class="container">
+        <div class="no-results" id="noResults" hidden>
+            <span class="no-results-icon">🔍</span>
+            <h3>No results found</h3>
+            <p>Try a different keyword (try: pointer, struct, printf, %d, fopen).</p>
+        </div>
+    </div>
+
+    <!-- ============= FOOTER ============= -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span class="logo-icon">&lt;/&gt;</span>
+                        <span class="logo-text">C Programming<span class="logo-accent">Hub</span></span>
+                    </a>
+                    <p class="footer-tagline">Learn • Practice • Build</p>
+                </div>
+                <div class="footer-meta">
+                    <p>Made with ❤️ by <strong>Shyam</strong></p>
+                    <p class="version">Version 0.4.0</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 C Programming Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast -->
+    <div class="toast" id="toast" role="status" aria-live="polite">Copied!</div>
+
+    <script src="js/main.js"></script>
+    <script src="js/syntax.js"></script>
+</body>
+</html>
