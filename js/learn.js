@@ -1,8 +1,4 @@
-/* ==============================
-   LEARN PAGE — VANILLA JS
-   - Accordion lessons
-   - Live search filter
-   ============================== */
+
 
 (function () {
     'use strict';
@@ -12,7 +8,7 @@
         initSearch();
     });
 
-    /* ---------- ACCORDION ---------- */
+    
     function initAccordion() {
         var headers = document.querySelectorAll('.lesson-header');
 
@@ -20,7 +16,7 @@
             header.addEventListener('click', function () {
                 var card = header.closest('.lesson-card');
 
-                // Locked lessons — do not expand
+
                 if (card.classList.contains('locked')) {
                     flashLocked(card);
                     return;
@@ -28,7 +24,7 @@
 
                 var isOpen = card.classList.contains('open');
 
-                // Close all other lessons (single-open accordion)
+
                 document.querySelectorAll('.lesson-card.open').forEach(function (other) {
                     if (other !== card) {
                         other.classList.remove('open');
@@ -37,11 +33,11 @@
                     }
                 });
 
-                // Toggle current
+
                 card.classList.toggle('open', !isOpen);
                 header.setAttribute('aria-expanded', String(!isOpen));
 
-                // Smooth scroll into view when opening
+
                 if (!isOpen) {
                     setTimeout(function () {
                         var rect = card.getBoundingClientRect();
@@ -55,7 +51,7 @@
         });
     }
 
-    /* ---------- LOCKED FEEDBACK ---------- */
+    
     function flashLocked(card) {
         card.style.transition = 'transform 0.1s, box-shadow 0.1s';
         card.style.transform = 'translateX(-4px)';
@@ -72,7 +68,7 @@
         }, 160);
     }
 
-    /* ---------- SEARCH ---------- */
+    
     function initSearch() {
         var input = document.getElementById('lessonSearch');
         var clearBtn = document.getElementById('searchClear');
@@ -87,7 +83,7 @@
             var query = input.value.trim().toLowerCase();
             var visible = 0;
 
-            // Toggle clear button
+
             if (query.length > 0) {
                 clearBtn.classList.add('visible');
             } else {
@@ -99,7 +95,7 @@
                 var keywords = (card.getAttribute('data-keywords') || '').toLowerCase();
                 var title = titleEl ? titleEl.textContent.toLowerCase() : '';
 
-                // Also search inside lesson body content
+
                 var bodyText = '';
                 var body = card.querySelector('.lesson-body');
                 if (body) bodyText = body.textContent.toLowerCase();
@@ -110,7 +106,7 @@
                 if (match) {
                     card.classList.remove('hidden');
                     visible++;
-                    // Highlight inside lesson body when searching
+
                     if (query.length >= 2 && body) {
                         highlightInElement(body, query);
                     } else if (body) {
@@ -122,14 +118,14 @@
                 }
             });
 
-            // Update count display
+
             if (query === '') {
                 countEl.textContent = total + ' lessons';
             } else {
                 countEl.textContent = visible + ' / ' + total + ' match';
             }
 
-            // Toggle no-results message
+
             if (noResults) {
                 if (visible === 0 && query !== '') {
                     noResults.hidden = false;
@@ -139,14 +135,14 @@
             }
         }
 
-        // Debounced input listener
+
         var debounce;
         input.addEventListener('input', function () {
             clearTimeout(debounce);
             debounce = setTimeout(filter, 120);
         });
 
-        // Clear button
+
         if (clearBtn) {
             clearBtn.addEventListener('click', function () {
                 input.value = '';
@@ -155,7 +151,7 @@
             });
         }
 
-        // Esc key clears
+
         input.addEventListener('keydown', function (e) {
             if (e.key === 'Escape') {
                 input.value = '';
@@ -164,11 +160,11 @@
             }
         });
 
-        // Initial count
+
         countEl.textContent = total + ' lessons';
     }
 
-    /* ---------- HIGHLIGHT HELPERS ---------- */
+    
     function highlightInElement(container, query) {
         removeHighlights(container);
         if (!query || query.length < 2) return;
@@ -177,7 +173,7 @@
         var nodes = [];
         var node;
         while ((node = walker.nextNode())) {
-            // skip code blocks to avoid breaking syntax
+
             if (node.parentElement && (
                 node.parentElement.tagName === 'CODE' ||
                 node.parentElement.tagName === 'PRE' ||
