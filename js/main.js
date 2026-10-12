@@ -1,12 +1,9 @@
-/* ==============================
-   C PROGRAMMING HUB — MAIN.JS
-   Vanilla JS — No Frameworks
-   ============================== */
+
 
 (function () {
     'use strict';
 
-    /* ---------- DOM READY ---------- */
+    
     document.addEventListener('DOMContentLoaded', function () {
         initHamburger();
         initNavbarScroll();
@@ -17,7 +14,7 @@
         initDisabledLinks();
     });
 
-    /* ---------- HAMBURGER MENU ---------- */
+    
     function initHamburger() {
         var hamburger = document.getElementById('hamburger');
         var navMenu = document.getElementById('navMenu');
@@ -29,7 +26,7 @@
             navMenu.classList.toggle('active');
         });
 
-        // Close menu when a link is clicked
+
         var navLinks = navMenu.querySelectorAll('.nav-link');
         navLinks.forEach(function (link) {
             link.addEventListener('click', function () {
@@ -38,7 +35,7 @@
             });
         });
 
-        // Close menu when clicking outside
+
         document.addEventListener('click', function (e) {
             if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
                 hamburger.classList.remove('active');
@@ -47,7 +44,7 @@
         });
     }
 
-    /* ---------- NAVBAR SCROLL EFFECT ---------- */
+    
     function initNavbarScroll() {
         var navbar = document.getElementById('navbar');
         if (!navbar) return;
@@ -66,7 +63,7 @@
         }, { passive: true });
     }
 
-    /* ---------- ACTIVE LINK ON SCROLL ---------- */
+    
     function initActiveLink() {
         var sections = document.querySelectorAll('section[id]');
         var navLinks = document.querySelectorAll('.nav-link');
@@ -93,9 +90,9 @@
         }, { passive: true });
     }
 
-    /* ---------- SCROLL REVEAL ANIMATION ---------- */
+    
     function initScrollReveal() {
-        // Elements to animate
+
         var selectors = [
             '.section-header',
             '.roadmap-card',
@@ -120,7 +117,7 @@
             var observer = new IntersectionObserver(function (entries) {
                 entries.forEach(function (entry) {
                     if (entry.isIntersecting) {
-                        // staggered delay for siblings
+
                         var siblings = entry.target.parentElement
                             ? Array.from(entry.target.parentElement.children).filter(function (c) {
                                 return c.classList.contains('reveal');
@@ -143,12 +140,12 @@
 
             elements.forEach(function (el) { observer.observe(el); });
         } else {
-            // Fallback for old browsers
+
             elements.forEach(function (el) { el.classList.add('visible'); });
         }
     }
 
-    /* ---------- ANIMATED STAT COUNTERS ---------- */
+    
     function initStatCounters() {
         var statNumbers = document.querySelectorAll('.stat-number');
 
@@ -163,7 +160,7 @@
                 if (!startTime) startTime = timestamp;
                 var progress = Math.min((timestamp - startTime) / duration, 1);
 
-                // ease-out cubic
+
                 var eased = 1 - Math.pow(1 - progress, 3);
                 var current = Math.floor(eased * target);
 
@@ -198,7 +195,7 @@
         }
     }
 
-    /* ---------- SMOOTH SCROLL POLYFILL ---------- */
+    
     function initSmoothScroll() {
         var links = document.querySelectorAll('a[href^="#"]');
 
@@ -222,7 +219,7 @@
         });
     }
 
-    /* ---------- DISABLED / COMING SOON LINKS ---------- */
+    
     function initDisabledLinks() {
         var disabled = document.querySelectorAll('.nav-disabled, [data-soon]');
         var toast = document.getElementById('toast');
@@ -230,7 +227,7 @@
 
         function showToast(msg, type) {
             if (!toast) return;
-            // Create toast on the fly if missing (so any page can use it)
+
             if (!toast.classList.contains('toast')) {
                 toast.classList.add('toast');
             }
@@ -251,7 +248,7 @@
                 var msg = el.getAttribute('data-soon') || 'Coming soon';
                 showToast('⏳ ' + msg, 'warn');
 
-                // Subtle shake for feedback
+
                 el.style.transition = 'transform 0.12s';
                 el.style.transform = 'translateX(-3px)';
                 setTimeout(function () { el.style.transform = 'translateX(3px)'; }, 80);
